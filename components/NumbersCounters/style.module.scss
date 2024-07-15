@@ -1,0 +1,37 @@
+.stats-container {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 30px auto;
+    max-width: 1000px;
+    padding-inline: 16px;
+  }
+  
+  .stats-container .stat {
+    background: #ef233c;
+    padding: 24px;
+    text-align: center;
+    color: #edf2f4;
+  }
+  
+  .stats-container .stat .odometer {
+    font-size: 50px;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .stats-container .stat .type {
+    font-size: 20px;
+  }
+  
+  .odometer.plus {
+    position: relative;
+  }
+  
+  .odometer.plus::after {
+    content: "+";
+    position: absolute;
+    top: 0;
+    right: -16px;
+    font-size: 20px;
+  }

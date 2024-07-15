@@ -1,0 +1,76 @@
+.content {
+  display: flex !important;
+  height: 407px !important;
+  max-width: 1296px !important;
+  width: 100% !important;
+  padding: 32px !important;
+  gap: 45px !important;
+  border-radius: 10px;
+  border: 1.8px solid #fff;
+  background: var(--comment-bg);
+  backdrop-filter: blur(8.899999618530273px);
+  margin-top: 24px !important;
+
+  @media (max-width: 768px) {
+    height: 630px !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+}
+
+.textComments {
+  @media (max-width: 768px) {
+    gap: 30px !important;
+
+    p {
+      padding: 10px;
+      max-height: 220px;
+      overflow-y: auto;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    gap: 30px !important;
+
+    p{
+      padding: 10px;
+      max-height: 220px; 
+      overflow-y: auto; 
+    }
+     }
+}
+
+.imageComment {
+  @media (max-width: 768px) {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 30px !important;
+  }
+}
+
+.imageComment > img {
+  width: 343px !important;
+  height: 343px !important;
+  display: flex !important;
+  border: 1px solid var(--gray4) !important;
+  border-radius: 4px !important;
+  object-fit: cover !important;
+  transition: transform 0.5s ease;
+  aspect-ratio: 1/1 !important;
+
+  @media (min-width: 768px) and (max-width: 1024px)  {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  @media (max-width: 768px) {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+    object-position: 50% 50%;
+  }
+}

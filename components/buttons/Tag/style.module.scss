@@ -1,0 +1,35 @@
+.tag {
+  width: fit-content !important;
+  align-items: flex-start;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  background: linear-gradient(
+    45deg,
+    rgba(237, 252, 246, 0.9) 0%,
+    rgba(227, 235, 246, 0.774) 50%,
+    rgba(235, 235, 238, 0.6) 100%
+  );
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px) !important; 
+  display: inline-flex;
+  padding: 4px 12px !important;
+  cursor:initial !important;
+  height: auto !important;
+
+  & span {
+    font-family: Montserrat;
+    font-size: clamp(14px, 4vw, 18px) !important;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2.16px;
+    background: linear-gradient(
+      180deg,
+      rgb(17, 138, 107) 0%,
+      rgb(27, 166, 129) 100%
+    );
+    background: linear-gradient(45deg, #118a6b 0%, #1ba681 100%
+    );
+    background-clip: text;
+  }
+}

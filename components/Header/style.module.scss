@@ -1,0 +1,254 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+
+  &.default {
+    background: var(--colorSecondary);
+    backdrop-filter: blur(0);
+  }
+
+  &.scrolled {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.767);
+  }
+
+  .containerHeader {
+    @media (max-width: 1043px) {
+        padding: 25px 30px !important;
+    }
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: scale(0.8) !important;
+
+    @media (min-width: 320px) {
+      transform: inherit !important;
+    }
+
+    .button {
+      @media (max-width: 1044px) {
+        display: none !important;
+      }
+    }
+
+    .menuItens {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      width: 100%;
+      justify-content: space-between;
+
+      .logo {
+        cursor: pointer !important;
+        width: 100% !important;
+        max-width: 150px !important;
+        min-width: 100px !important;
+      }
+
+      .navbar {
+        display: flex;
+        gap: 30px;
+        transition: transform 0.3s ease;
+
+
+        @media (max-width: 1043px) {
+          display: none;
+          flex-direction: column;
+          gap: 0px;
+          position: absolute;
+          top: 81px;
+          right: 0;
+          width: 250px;
+          padding: 20px;
+          align-items: center !important;
+
+          &.default {
+            background: var(--colorSecondary);
+            backdrop-filter: blur(0);
+          }
+
+          &.scrolled {
+            background: rgba(255, 255, 255, 0.767);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          }
+
+          &.open {
+            display: flex !important;
+            animation: menuAnimation 0.5s ease-in-out !important;
+            transition: 0.3s !important;
+            height: 100vh !important;
+            overflow-y: hidden !important;
+          }
+
+          &.close {
+            animation: menuAnimation 1s ease-in-out !important;
+            animation-direction: reverse;
+          }
+        }
+
+        .linkNav {
+          &.default {
+            color: var(--colorWhite) !important;
+            font-weight: 600 !important;
+            transition: 0.5s !important;
+            @media (max-width: 1043px) {
+            padding: 24px !important;
+            border-top: 1px solid var(--gray7) !important;
+            border-bottom: 1px solid var(--gray7) !important;
+            width: 100% !important;
+            justify-content: center;
+            align-content: center;
+            display: flex;
+            }
+
+            &:hover {
+              color: var(--colorPrimary) !important;
+              transform: scale(1.1) !important;
+            }
+          }
+
+          &.scrolled {
+            color: var(--colorTextPrimary) !important;
+            font-weight: 600 !important;
+            transition: 0.5s !important;
+            @media (max-width: 1043px) {
+            padding: 24px !important;
+            border-top: 1px solid var(--gray7) !important;
+            border-bottom: 1px solid var(--gray7) !important;
+            width: 100% !important;
+            justify-content: center;
+            align-content: center;
+            display: flex;
+            }
+
+            &:hover {
+              color: var(--colorPrimary) !important;
+              transform: scale(1.1) !important;
+            }
+          }
+        }
+
+        .dropdown {
+          position: relative;
+          cursor: pointer;
+
+          .dropdownMenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            flex-direction: column;
+
+            &.default {
+              background: var(--colorSecondary) !important;
+              backdrop-filter: blur(0);
+            }
+
+            &.scrolled {
+              background: rgba(255, 255, 255, 0.767);
+              backdrop-filter: blur(10px);
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            &.open {
+              display: flex;
+            }
+
+            a {
+              padding: 10px 20px;
+              color: var(--gray1) !important;
+              text-decoration: none;
+              white-space: nowrap;
+
+              &.default {
+                color: red !important;
+                font-weight: 600 !important;
+              }
+
+              &.scrolled {
+                color: var(--colorSecondary) !important;
+                font-weight: 600 !important;
+              }
+
+              &:hover {
+                background-color: var(--colorSecondary);
+                color: white !important;
+              }
+            }
+          }
+        }
+      }
+
+      .burger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+
+        @media (max-width: 1043px) {
+          display: flex;
+        }
+
+        .burgerLine {
+          width: 25px;
+          height: 3px;
+          background-color: var(--gray1);
+          transition: all 0.3s;
+
+          &.open {
+            background-color: var(--colorSecondary);
+          }
+        }
+
+        &.default .burgerLine {
+          background-color: var(--gray1);
+        }
+
+        &.scrolled .burgerLine {
+          background-color: var(--colorSecondary);
+        }
+      }
+    }
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px) !important;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+
+  &.open {
+    opacity: 1;
+    pointer-events: auto;
+    overflow-y: hidden !important;
+  }
+}
+
+@keyframes menuAnimation {
+  from {
+    transform: translatex(100%);
+  }
+  to {
+    transform: translatx(0);
+  }
+}
+
+

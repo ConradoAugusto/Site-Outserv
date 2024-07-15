@@ -1,0 +1,16 @@
+.content {
+  display: flex !important;
+  gap: 20px !important;
+
+.icon {
+  svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+  p {
+    color: var(--gray4)!important;
+    line-height: normal !important;
+  }
+}

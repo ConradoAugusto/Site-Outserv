@@ -1,0 +1,178 @@
+@keyframes levitation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+//   aplicar delay a cada elemento
+
+//  style={{animationDelay:"5s"}}
+
+.levitate {
+  animation: levitation 2s ease-in-out infinite;
+}
+
+//   ____________________________________________________________
+
+@keyframes cosmosRight {
+  0% {
+    transform: translateY(0);
+    transform: translatex(0);
+  }
+  10% {
+    transform: translateY(-10px);
+    transform: translatex(-30px);
+  }
+  20% {
+    transform: translateY(0);
+    transform: translatex(0);
+  }
+  100% {
+    transform: translateY(0);
+    transform: translatex(0);
+  }
+}
+
+//   aplicar delay a cada elemento
+
+//  style={{animationDelay:"5s"}}
+
+.cosmosRight {
+  animation: cosmosRight 20s ease-in-out infinite;
+}
+
+@keyframes cosmosLeft {
+  0% {
+    transform: translateY(0);
+    transform: translate(0);
+  }
+  10% {
+    transform: translateY(-10px);
+    transform: translate(30px);
+  }
+  20% {
+    transform: translateY(0);
+    transform: translate(0);
+  }
+  100% {
+    transform: translateY(0);
+    transform: translate(0);
+  }
+}
+
+//   aplicar delay a cada elemento
+
+//  style={{animationDelay:"5s"}}
+
+.cosmosLeft {
+  animation: cosmosLeft 20s ease-in-out infinite;
+}
+
+@keyframes cosmosTop {
+  0% {
+    transform: translateY(0);
+    transform: translate(0);
+  }
+  10% {
+    transform: translateY(-10px);
+    transform: translatey(30px);
+  }
+  20% {
+    transform: translateY(0);
+    transform: translatey(0);
+  }
+  100% {
+    transform: translateY(0);
+    transform: translatey(0);
+  }
+}
+
+//   aplicar delay a cada elemento
+
+//  style={{animationDelay:"5s"}}
+
+.cosmosTop {
+  animation: cosmosTop 20s ease-in-out infinite;
+}
+
+@keyframes cosmosBottom {
+  0% {
+    transform: translateY(0);
+    transform: translate(0);
+  }
+  10% {
+    transform: translateY(-10px);
+    transform: translatey(-30px);
+  }
+  20% {
+    transform: translateY(0);
+    transform: translatey(0);
+  }
+  100% {
+    transform: translateY(0);
+    transform: translatey(0);
+  }
+}
+
+//   aplicar delay a cada elemento
+
+//  style={{animationDelay:"5s"}}
+
+.cosmosBottom {
+  animation: cosmosBottom 20s ease-in-out infinite;
+}
+
+// ________________________________________________________
+
+@keyframes circleRight {
+  0% {
+    transform: translateY(0);
+    transform: translatex(0);
+  }
+  50% {
+    transform: translateY(-10px);
+    transform: translatex(-100px);
+  }
+  100% {
+    transform: translateY(0);
+    transform: translatex(0);
+  }
+}
+
+//   aplicar delay a cada elemento
+
+//  style={{animationDelay:"5s"}}
+
+.circleRight {
+  animation: circleRight 30s ease-in-out infinite;
+}
+
+@keyframes circleLeft {
+  0% {
+    transform: translateY(0);
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(-10px);
+    transform: translate(100px);
+  }
+
+  100% {
+    transform: translateY(0);
+    transform: translate(0);
+  }
+}
+
+//   aplicar delay a cada elemento
+
+//  style={{animationDelay:"5s"}}
+
+.circleLeft {
+  animation: circleLeft 30s ease-in-out infinite;
+}

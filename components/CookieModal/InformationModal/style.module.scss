@@ -1,0 +1,158 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .preferenceHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .preferenceTitle {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .btnClose {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .preferenceBodyWrapper {
+    margin-top: 20px;
+  }
+  
+  .preferenceContentWrapper {
+    margin-bottom: 20px;
+  }
+  
+  .accordionWrapper {
+    margin-bottom: 20px;
+  }
+  
+  .accordion {
+    margin-bottom: 10px;
+  }
+  
+  .accordionItem {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .accordionChevron {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .accordionHeaderWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .accordionHeader {
+    display: flex;
+    align-items: center;
+  }
+  
+  .accordionBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .alwaysActive {
+    margin-left: 10px;
+    font-size: 14px;
+    color: green;
+  }
+  
+  .accordionHeaderDes {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .accordionBody {
+    padding: 10px 0;
+  }
+  
+  .auditTable {
+    background: #f4f4f4;
+    padding: 10px;
+  }
+  
+  .emptyCookiesText {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .footerWrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .footerShadow {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0) 0%, #fff 100%);
+  }
+  
+  .preferenceBtnWrapper {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    font-size: 14px;
+  }
+  
+  .btnReject {
+    color: #1863dc;
+    background-color: transparent;
+    border-color: #1863dc;
+  }
+  
+  .btnPreferences {
+    color: #1863dc;
+    background-color: transparent;
+    border-color: #1863dc;
+  }
+  
+  .btnAccept {
+    color: #fff;
+    background-color: #1863dc;
+    border-color: #1863dc;
+  }
+  
+  .btnCloseModal {
+    color: #fff;
+    background-color: #1863dc;
+    border-color: #1863dc;
+  }

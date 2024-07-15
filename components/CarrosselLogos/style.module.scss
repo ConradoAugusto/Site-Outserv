@@ -1,0 +1,53 @@
+.sectionLogos {
+    overflow: hidden;
+    padding: 38px 0;
+    background: var(--colorPrimary);
+    white-space: nowrap;
+    position: relative;
+    height: 75px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  
+    .sectionLogos:before,
+    .sectionLogos:after {
+      position: absolute;
+      top: 0;
+      width: 250px;
+      height: 100%;
+      content: "";
+      z-index: 2;
+    }
+    .logosWrapper {
+      display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    }
+  
+    .logosSlide {
+      display: flex;
+      gap: 20px;
+      width: 50%;
+      animation: 35s slide infinite linear;
+  
+      img {
+        height: 30px !important;
+        margin: 0 10px !important;
+      }
+    }
+  
+    .logos-slide img {
+      height: 70px;
+      margin: 0 40px;
+    }
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  

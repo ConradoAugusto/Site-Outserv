@@ -1,0 +1,106 @@
+.footer {
+  align-items: flex-end !important;
+  background-color: #ffffff !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  padding: 46px 72px !important;
+  position: relative !important;
+  width: 100vw !important;
+  -webkit-box-shadow: -7px -9px 60px -42px rgba(0, 0, 0, 0.67) !important;
+  -moz-box-shadow: -7px -9px 60px -42px rgba(0, 0, 0, 0.67) !important;
+  box-shadow: -7px -9px 60px -42px rgba(0, 0, 0, 0.67) !important;
+
+  @media (max-width: 768px) {
+    padding: 16px 0px !important;
+  }
+
+  .content {
+    display: flex !important;
+    justify-content: space-between !important;
+
+    @media (max-width: 1174px) {
+      flex-direction: column !important;
+      gap: 32px !important ;
+    }
+
+    .infos {
+      max-width: 284px !important;
+      width: 100% !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 16px !important;
+    }
+
+    .outserv {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 310px !important;
+
+      @media (max-width: 768px) {
+        padding: 0px 10px 0px 0px !important;
+      }
+    }
+    .outserv > img {
+      width: 150px !important;
+    }
+
+    .outserv > p {
+      line-height: normal !important;
+    }
+  }
+
+  .redesSociais {
+    display: flex;
+    gap: 12px;
+  }
+
+  .navbar {
+    display: flex;
+    gap: 46px;
+
+    @media (max-width: 1174px) {
+      flex-direction: column !important;
+      gap: 32px !important ;
+    }
+
+    .itemOne {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .itemTwo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .itemThree {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .copyrigh {
+    display: flex !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    gap: 30px;
+
+    @media (max-width: 1174px) {
+      flex-direction: column !important;
+      gap: 32px !important ;
+    }
+
+    hr {
+      margin-top: 24px !important;
+      margin-bottom: 24px !important;
+    }
+
+    .contentCopyrigh {
+      display: flex !important;
+      gap: 16px !important;
+      flex-wrap: wrap !important;
+    }
+  }
+}

@@ -1,0 +1,557 @@
+:root {
+  // _______Colors__________
+
+  --colorPrimary: #21b88f !important;
+  --colorTextPrimary: #118a6b !important;
+  --colorSecondary: #272e48 !important;
+  --colorSuccess: #28c76f !important;
+  --colorDanger: #ea5455 !important;
+  --colorRed: #ff0000 !important;
+  --colorWarning: #ff9f43 !important;
+  --colorInfo: #00cfe8 !important;
+  --colorDark: #4b4b4b !important;
+  --colorLight: #babfc7 !important;
+  --colorPurple: #7749f8 !important;
+  --colorWhite: #ffffff !important;
+
+  --colorOrangeIcon: #e17007;
+  --colorOrangeIconHome: #e08c3c;
+
+  // _______Colors__Hover__________
+
+  --primary-hover: #21b88f !important;
+  --secondary-hover: #272e48 !important;
+  --success-hover: #28c76f !important;
+  --danger-hover: #ea5455 !important;
+  --warning-hover: #ff9f43 !important;
+  --info-hover: #00cfe8 !important;
+  --dark-hover: #4b4b4b !important;
+  --light-hover: #babfc7 !important;
+
+  //    _______Transparent__Colors__________
+
+  --colorPrimary-50: rgba(33, 184, 143, 0.38) !important;
+  --colorSecondary-50: rgba(39, 46, 72, 0.38) !important;
+  --colorSuccess-50: rgba(40, 199, 111, 0.38) !important;
+  --colorDanger-50: rgba(234, 84, 85, 0.65) !important;
+  --colorWarning-50: rgba(255, 159, 67, 0.65) !important;
+  --colorInfo-50: rgba(0, 207, 232, 0.65) !important;
+  --colorDark-50: rgba(30, 30, 30, 0.65) !important;
+  --colorLight-50: rgba(186, 191, 199, 0.65) !important;
+
+  --badgeOrange: rgb(255, 246, 237) !important;
+  --badgeWhite: rgb(255, 255, 255) !important;
+  --badgeRed: rgb(255, 240, 240) !important;
+  --badgePurple: #dcd6ec !important;
+  --badgeBlue: #00d1e8c2 !important;
+  --badgeDanger: #ea5455 !important;
+  // _______Colors__Gradient_________
+
+  .primaryText {
+    color: var(--colorTextPrimary) !important;
+  }
+
+  --mirror: linear-gradient(
+    45deg,
+    rgba(237, 252, 246, 0.6) 0%,
+    rgba(227, 235, 246, 0.6) 50%
+  ) !important;
+
+  --neon: linear-gradient(
+    237deg,
+    #aeecd34f -12.37%,
+    rgba(227, 235, 246, 0.068) 55.1%,
+    rgba(255, 255, 255, 0.9) 89.86%
+  );
+
+  --aboutBcg: linear-gradient(
+    201deg,
+    rgba(120, 221, 187, 0.6) 11.01%,
+    rgba(255, 255, 255, 0.6) 48.4%
+  );
+
+  --linearPrimary: linear-gradient(
+    45deg,
+    #118a6b 0%,
+    #1ba681 80%,
+    #1ba681 100%
+  ) !important;
+
+  --linearPrimary-hover: linear-gradient(
+    47deg,
+    #21b88f 0.75%,
+    #42c59d 93.64%
+  ) !important;
+
+  --linearPrimary-active: linear-gradient(
+    47deg,
+    #118a6b 0%,
+    #1ba681 100%
+  ) !important;
+
+  --linearPrimary-acordeon: linear-gradient(
+    47deg,
+    #118a6c05 0%,
+    #1ba6812c 100%
+  ) !important;
+
+  --linearSecondary: linear-gradient(
+    45deg,
+    #272e48 0%,
+    #374571 100%
+  ) !important;
+  --linearSecondary-hover: linear-gradient(
+    45deg,
+    #374571 0%,
+    #5064a4 100%
+  ) !important;
+  --linearSecondary-active: linear-gradient(
+    48deg,
+    #272e48 0%,
+    #374571 54.71%
+  ) !important;
+
+  --linearSuccess: linear-gradient(
+    46deg,
+    #28c76f 0%,
+    #48da89 94.75%,
+    #48da89 94.75%
+  ) !important;
+  --linearSuccess-hover: linear-gradient(
+    47deg,
+    #28c76f 0%,
+    #48da89 93.46%,
+    #48da89 93.46%
+  ) !important;
+  --linearSuccess-active: linear-gradient(
+    45deg,
+    #1f9d57 0%,
+    #28c76f 100%
+  ) !important;
+
+  --linearDanger: linear-gradient(
+    44deg,
+    #ea5455 2.91%,
+    #f08182 94.71%
+  ) !important;
+  --linearDanger-hover: linear-gradient(
+    49deg,
+    #ea5455 0.32%,
+    #f08182 93.45%
+  ) !important;
+  --linearDanger-active: linear-gradient(
+    45deg,
+    #e42728 0.32%,
+    #ea5455 100%
+  ) !important;
+
+  --linearWarning: linear-gradient(
+    42deg,
+    #ff922a 2.18%,
+    #ffb976 97.5%
+  ) !important;
+  --linearWarning-hover: linear-gradient(
+    48deg,
+    #ff922a 1.18%,
+    #ffb976 95.16%
+  ) !important;
+  --linearWarning-active: linear-gradient(
+    45deg,
+    #ff8510 0.32%,
+    #ff9f43 100%
+  ) !important;
+
+  --linearInfo: linear-gradient(45deg, #00cfe8 0%, #1ce7ff 100%) !important;
+  --linearInfo-hover: linear-gradient(
+    45deg,
+    #00cfe8 0%,
+    #1ce7ff 100%
+  ) !important;
+  --linearInfo-active: linear-gradient(
+    45deg,
+    #00b8cf 0.32%,
+    #00cfe8 100%
+  ) !important;
+
+  --linearDark: linear-gradient(48deg, #353437 0%, #747581 94.43%) !important;
+  --linearDark-hover: linear-gradient(
+    48deg,
+    #515157 1.18%,
+    #82848e 94.3%
+  ) !important;
+  --linearDark-active: linear-gradient(
+    45deg,
+    #353437 1.18%,
+    #515157 164.14%
+  ) !important;
+
+  --comment-bg: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0.7) 0.88%,
+    rgba(244, 244, 244, 0.7) 50.44%,
+    rgba(237, 237, 237, 0.7) 95.41%
+  );
+
+  --btnLightLinear: linear-gradient(
+    45deg,
+    #edfcf6 0%,
+    #e3ebf6 50%,
+    #ebebee 100%
+  ) !important;
+
+  --btnLightLinearHover: linear-gradient(
+    44deg,
+    #aeecd3 2.91%,
+    #e3ebf6 94.71%
+  ) !important;
+
+  --btnDarkLinear: linear-gradient(
+    45deg,
+    rgba(39, 46, 72, 0.65) 0%,
+    rgba(55, 69, 113, 0.65) 100%
+  ) !important;
+
+  --btnDarkLinearHover: linear-gradient(
+    45deg,
+    #374571 0%,
+    #5064a4 100%
+  ) !important;
+
+  // _______Colors__Gray__________
+
+  --gray1: #f6f7f8 !important;
+  --gray2: #ebebee !important;
+  --gray3: #dddee1 !important;
+  --gray4: #c5c7cb !important;
+  --gray5: #a8aab2 !important;
+  --gray6: #92949f !important;
+  --gray7: #82848e !important;
+  --gray8: #747581 !important;
+  --gray9: #62626b !important;
+  --gray10: #515157 !important;
+  --gray11: #353437 !important;
+
+  // _______Colors__Green__________
+
+  --green1: #edfcf6 !important;
+  --green2: #d5f6e7 !important;
+  --green3: #aeecd3 !important;
+  --green4: #42c59d !important;
+
+  // _______Colors__Blue__________
+
+  --blue1: #29365f !important;
+
+  // _____________Fonts______________
+  --fontPrimary: "Ritual", sans-serif !important;
+  --fontSecondary: "Montserrat", sans-serif !important;
+}
+
+@font-face {
+  font-family: "Ritual" !important;
+  src: url("../assets/font/Ritual-Semibold.otf") !important;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif !important;
+  background: var(--neon);
+  margin: 0 !important;
+  overflow-x: hidden !important;
+}
+
+html.specialPage,
+html.specialPage body {
+  height: 100vh;
+  margin: 0;
+}
+
+hr {
+  margin: 1rem 0 !important;
+  background: #0202023f !important;
+  border: 0 !important;
+  opacity: 0.25 !important;
+  height: 1px !important;
+  width: 100% !important;
+}
+
+.roundCookieIcon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 24px;
+}
+
+.btn-close:focus {
+  box-shadow: none !important;
+}
+
+main {
+  margin-top: 76px;
+}
+
+
+.accordion-button::after {
+ display: none !important;
+}
+
+.ritual {
+  font-family: "Ritual" !important;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.container {
+  margin: 0 auto !important;
+  width: 100%;
+  max-width: 1441px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 16px 72px !important;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 25px 30px !important;
+  }
+}
+
+.fade-in {
+  opacity: 0 !important;
+  animation: fadeIn 1s ease-in forwards !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0 !important;
+  }
+  to {
+    opacity: 1 !important;
+  }
+}
+
+.primary {
+  color: var(--colorPrimary) !important;
+}
+
+.primary-bg {
+  background-color: var(--colorPrimary) !important;
+}
+
+.secondary {
+  color: var(--colorSecondary) !important;
+}
+
+.secondary-bg {
+  background-color: var(--colorSecondary) !important;
+}
+
+.success {
+  color: var(--colorSuccess) !important;
+}
+
+.danger {
+  color: var(--colorDanger) !important;
+}
+
+.warning {
+  color: var(--colorWarning) !important;
+}
+
+.info {
+  color: var(--colorInfo) !important;
+}
+
+.dark {
+  color: var(--colorDark) !important;
+}
+
+.light {
+  color: var(--colorLight) !important;
+}
+
+.gray-1 {
+  color: var(--gray1) !important;
+}
+
+.gray-2 {
+  color: var(--gray2) !important;
+}
+
+.gray-3 {
+  color: var(--gray3) !important;
+}
+
+.gray-4 {
+  color: var(--gray4) !important;
+}
+
+.gray-5 {
+  color: var(--gray5) !important;
+}
+
+.gray-6 {
+  color: var(--gray6) !important;
+}
+
+.gray-7 {
+  color: var(--gray7) !important;
+}
+
+.gray-8 {
+  color: var(--gray8) !important;
+}
+
+.gray-9 {
+  color: var(--gray9) !important;
+}
+
+.gray-10 {
+  color: var(--gray10) !important;
+}
+
+.gray-11 {
+  color: var(--gray11) !important;
+}
+
+.green-1 {
+  color: var(--green1) !important;
+}
+
+.green-2 {
+  color: var(--green2) !important;
+}
+
+.green-3 {
+  color: var(--green3) !important;
+}
+
+.green-4 {
+  color: var(--green4) !important;
+}
+
+.blue-1 {
+  color: var(--blue1) !important;
+}
+
+.bg-primary {
+  background: var(--colorPrimary);
+}
+
+.bg-secondary {
+  background: var(--colorSecondary) !important;
+}
+
+.bg-success {
+  background: var(--colorSuccess) !important;
+}
+
+.bg-danger {
+  background: var(--colorDanger) !important;
+}
+
+.bg-warning {
+  background: var(--colorWarning) !important;
+}
+
+.warning {
+  color: var(--colorWarning-50) !important;
+}
+
+.bg-info {
+  background: var(--colorInfo) !important;
+}
+
+.bg-dark {
+  background: var(--colorDark) !important;
+}
+
+.bg-light {
+  background: var(--colorLight) !important;
+}
+
+.bg-gray-1 {
+  background: var(--gray1) !important;
+}
+
+.bg-gray-2 {
+  background: var(--gray2) !important;
+}
+
+.carrossel-img {
+  height: 40px !important;
+}
+
+.inverted {
+  transform: scaleX(-1) !important;
+}
+
+.textDark {
+  color: var(--colorPrimary) !important;
+}
+
+.textLight {
+  color: var(--colorTextPrimary) !important;
+}
+
+.textSecondary {
+  color: #2f417c !important;
+}
+
+.whiteColor {
+  color: var(--gray1) !important;
+}
+
+.bold {
+  font-weight: 600 !important;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.accordion-item {
+  background: transparent !important;
+  border: transparent !important;
+  &:focus {
+    border: none !important;
+  }
+  &:active {
+    border: none !important;
+  }
+}
+
+.noWrap {
+  display: flex !important;
+  white-space: nowrap !important;
+}
+
+.accordion-body {
+  padding: 0px 10px 0px 52px !important;
+}
+
+button:focus:not(:focus-visible) {
+  display: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  box-shadow: none !important;
+}
+
+.accordion-button {
+  @media (max-width: 1000px) {
+    font-size: clamp(18px, 4vw, 22px) !important;
+    font-weight: 600 !important;
+  }
+}

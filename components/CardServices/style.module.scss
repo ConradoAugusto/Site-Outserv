@@ -1,0 +1,94 @@
+.container {
+  display: flex !important;
+  margin-bottom: 30px !important;
+  height: fit-content!important;
+  width: 100% !important;
+  justify-content: space-around !important;
+  max-width: 416px !important;
+  flex-direction: column !important;
+  padding: 20px !important;
+  align-items: flex-start !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(146, 148, 159, 1) !important;
+  background: var(--linearSecondary);
+  min-height: 557px !important;
+  transition: .5s !important;
+  transform: scale(.9) !important;
+
+    &:hover {
+      transform: scale(.95) !important;
+      transition: .5s !important;
+      box-shadow: 4px 10px 10px 4px rgba(0, 0, 0, 0.20);
+    }
+
+  .card{
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 20px !important;
+
+    @media (max-width: 768px) {
+      padding: 0px !important;
+    }
+  }
+ .content {
+  height: 150px !important;
+  margin: 0 0 46px 0 !important;
+
+     @media (max-width: 768px) {
+      margin-bottom: 15px !important;
+    }
+
+  .title {
+    color: var(--colorPrimary) !important;
+    font-weight: 600 !important;
+    letter-spacing: 2.16px !important;
+  }
+  .text {
+    color: var(--gray1) !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.18px !important;
+  }
+  
+  .slogan {
+    margin-top: 12px !important;
+    color: var(--gray4) !important;
+  }
+ }
+
+.services{
+  height: 200px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 24px !important;
+  margin: 0 0 86px 0 !important;
+
+  @media (max-width: 768px) {
+    margin-bottom:40px !important;
+  }
+}
+
+ .button {
+  margin-top: 34px !important;
+  .btn {
+    display: flex !important;
+    width: fit-content !important;
+    padding: 8px 16px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+    border-radius: 4px !important;
+    border: 1px solid var(--colorPrimary) !important;
+    background: transparent !important;
+    color: var(--colorPrimary) !important;
+    transition: 0.3s !important;
+    cursor: pointer !important;
+
+    &:hover {
+      background: var(--colorPrimary) !important;
+      font-weight: 600 !important;
+      transition: 0.3s !important;
+      color: white !important;
+    }
+  }
+}
+}
