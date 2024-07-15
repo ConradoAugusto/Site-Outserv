@@ -9,10 +9,28 @@ export const Header = () => {
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [solucaoId, setSolucaoId] = useState("solucao");
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  useEffect(() => {
+    const updateSolucaoId = () => {
+      if (window.innerWidth < 1000) {
+        setSolucaoId("solucao_sm");
+      } else {
+        setSolucaoId("solucao");
+      }
+    };
+  
+    updateSolucaoId();
+    window.addEventListener("resize", updateSolucaoId);
+  
+    return () => {
+      window.removeEventListener("resize", updateSolucaoId);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,7 +74,7 @@ export const Header = () => {
       }
     }, 100);
 
-    setMenuOpen(false); 
+    setMenuOpen(false);
   };
 
   useEffect(() => {
@@ -65,23 +83,31 @@ export const Header = () => {
 
   return (
     <>
-      <header className={`${styles.header} ${scrolled ? styles.scrolled : styles.default}`}>
+      <header
+        className={`${styles.header} ${
+          scrolled ? styles.scrolled : styles.default
+        }`}
+      >
         <div id="navbar" className={`${styles.containerHeader} container`}>
           <div className={styles.menu}>
             <div className={styles.menuItens}>
               <img
                 onClick={(e) => handleLinkClick(e, "top")}
-                className={`${styles.logo} ${scrolled ? styles.scrolled : styles.default}`}
+                className={`${styles.logo} ${
+                  scrolled ? styles.scrolled : styles.default
+                }`}
                 alt="Logo Outserv"
                 src={scrolled ? LogoOutserv1 : LogoOutserv}
               />
               <nav
-                className={`${styles.navbar} ${scrolled ? styles.scrolled : styles.default} ${
-                  menuOpen ? styles.open : styles.close
-                }`}
+                className={`${styles.navbar} ${
+                  scrolled ? styles.scrolled : styles.default
+                } ${menuOpen ? styles.open : styles.close}`}
               >
                 <Link
-                  className={`paragraph bold linkNavbar noWrap ${styles.linkNav} ${scrolled ? styles.scrolled : styles.default}`}
+                  className={`paragraph bold linkNavbar noWrap ${
+                    styles.linkNav
+                  } ${scrolled ? styles.scrolled : styles.default}`}
                   href="/"
                   onClick={(e) => handleLinkClick(e, "top")}
                   aria-label="Tela inicial"
@@ -89,35 +115,45 @@ export const Header = () => {
                   Home
                 </Link>
                 <Link
-                  className={`paragraph bold linkNavbar noWrap ${styles.linkNav} ${scrolled ? styles.scrolled : styles.default}`}
-                  onClick={(e) => handleLinkClick(e, "solucao")}
+                  className={`paragraph bold linkNavbar noWrap ${
+                    styles.linkNav
+                  } ${scrolled ? styles.scrolled : styles.default}`}
+                  onClick={(e) => handleLinkClick(e, solucaoId)}
                   aria-label="Soluções"
                 >
                   Soluções
                 </Link>
                 <Link
-                  className={`paragraph bold linkNavbar noWrap ${styles.linkNav} ${scrolled ? styles.scrolled : styles.default}`}
+                  className={`paragraph bold linkNavbar noWrap ${
+                    styles.linkNav
+                  } ${scrolled ? styles.scrolled : styles.default}`}
                   onClick={(e) => handleLinkClick(e, "recursos")}
                   aria-label="Recursos"
                 >
                   Recursos
                 </Link>
                 <Link
-                  className={`paragraph bold linkNavbar noWrap ${styles.linkNav} ${scrolled ? styles.scrolled : styles.default}`}
+                  className={`paragraph bold linkNavbar noWrap ${
+                    styles.linkNav
+                  } ${scrolled ? styles.scrolled : styles.default}`}
                   onClick={(e) => handleLinkClick(e, "clientes")}
                   aria-label="Clientes"
                 >
                   Clientes
                 </Link>
                 <Link
-                  className={`paragraph bold linkNavbar noWrap ${styles.linkNav} ${scrolled ? styles.scrolled : styles.default}`}
+                  className={`paragraph bold linkNavbar noWrap ${
+                    styles.linkNav
+                  } ${scrolled ? styles.scrolled : styles.default}`}
                   to="/sobre"
                   aria-label="Sobre nós"
                 >
                   Sobre nós
                 </Link>
                 <Link
-                  className={`paragraph bold linkNavbar noWrap ${styles.linkNav} ${scrolled ? styles.scrolled : styles.default}`}
+                  className={`paragraph bold linkNavbar noWrap ${
+                    styles.linkNav
+                  } ${scrolled ? styles.scrolled : styles.default}`}
                   data-bs-toggle="offcanvas"
                   data-bs-target="#offcanvasRight"
                   aria-controls="offcanvasRight"
@@ -127,12 +163,26 @@ export const Header = () => {
                 </Link>
               </nav>
               <div
-                className={`${styles.burger} ${scrolled ? styles.scrolled : styles.default}`}
+                className={`${styles.burger} ${
+                  scrolled ? styles.scrolled : styles.default
+                }`}
                 onClick={toggleMenu}
               >
-                <div className={`${styles.burgerLine} ${menuOpen ? styles.open : ""}`}></div>
-                <div className={`${styles.burgerLine} ${menuOpen ? styles.open : ""}`}></div>
-                <div className={`${styles.burgerLine} ${menuOpen ? styles.open : ""}`}></div>
+                <div
+                  className={`${styles.burgerLine} ${
+                    menuOpen ? styles.open : ""
+                  }`}
+                ></div>
+                <div
+                  className={`${styles.burgerLine} ${
+                    menuOpen ? styles.open : ""
+                  }`}
+                ></div>
+                <div
+                  className={`${styles.burgerLine} ${
+                    menuOpen ? styles.open : ""
+                  }`}
+                ></div>
               </div>
               <ButtonPrimary
                 className={`${styles.button} faleconosco paragraph bold linkNavbar noWrap`}
@@ -142,7 +192,10 @@ export const Header = () => {
           </div>
         </div>
       </header>
-      <div className={`${styles.backdrop} ${menuOpen ? styles.open : ""}`} onClick={toggleMenu}></div>
+      <div
+        className={`${styles.backdrop} ${menuOpen ? styles.open : ""}`}
+        onClick={toggleMenu}
+      ></div>
     </>
   );
 };

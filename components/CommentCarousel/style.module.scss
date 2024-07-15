@@ -54,6 +54,20 @@
   }
 }
 
-.slick-next {
-  right: -38px !important;
+.nextArrow {
+  right: -12px !important;
+}
+
+.prevArrow {
+  left: -30px !important;
+}
+
+.slick-prev:before, .slick-next:before {
+ font-size: 0 !important;
+ color: rebeccapurple !important;
+}
+
+.containerSlide {
+  position: relative !important;
+  z-index: 99999 !important;
 }

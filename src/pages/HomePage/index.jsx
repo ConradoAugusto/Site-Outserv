@@ -455,7 +455,7 @@ export const HomePage = () => {
         </div>
       </section>
 
-      <section id="solucao" className={styles.sectionConheça_Sm}>
+      <section id="solucao_sm" className={styles.sectionConheça_Sm}>
         <div className="container ">
           <div className="w-100 text-center my-5">
             <Tag content={"CONHEÇA NOSSO PORTAL RH"} />

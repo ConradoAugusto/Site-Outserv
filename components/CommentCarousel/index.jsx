@@ -27,7 +27,7 @@ const comments = [
 
 const CommentCarousel = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -42,7 +42,7 @@ const CommentCarousel = () => {
       className={`${styles.sectionComments} uk-animation-slide-left-medium`}
       uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 300;"
     >
-      <div className="container">
+      <div className={`${styles.containerSlide} container`}>
         <div className="d-flex justify-content-center mb-3">
           <Tag content={"O QUE DIZEM OS CLIENTES"} />
         </div>
