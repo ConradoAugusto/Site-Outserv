@@ -132,7 +132,7 @@ export const Form = () => {
     <div
       className={`${styles.form_container} d-flex flex-column align-items-center justify-content-center secondary-bg`}
     >
-      <div id="contato" className="container" style={{ zIndex: 999 }}>
+      <div id="contato" className="container" style={{ zIndex: 99 }}>
         <div className={styles.containerForm}>
           <div
             className="text-center col-md-12 uk-animation-slide-left-medium"
