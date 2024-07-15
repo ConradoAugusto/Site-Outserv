@@ -21,12 +21,6 @@ import eptv from "../../assets/logos/eptv.png";
 import turbo from "../../assets/logos/turbo.png";
 import eldorado from "../../assets/logos/eldorado.png";
 
-
-
-
-
-
-
 import { Form } from "../../../components/Form";
 import { IconsFlutuantes } from "../../../components/buttons/IconsFlutuantes";
 import animationMascote from "../../assets/mascote.gif";

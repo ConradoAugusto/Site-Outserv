@@ -22,7 +22,7 @@
     }
 
     @media (max-width: 1174px) {
-      margin-top: 200px !important;
+      margin-top: 257px !important;
       flex-direction: column-reverse !important;
       gap: 32px !important ;
     }
@@ -68,7 +68,7 @@
     width: 100% !important;
     height: 100% !important;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1174px) {
       display: none !important;
     }
 
@@ -190,42 +190,22 @@
 }
 
 .sectionAbout {
-  .container {
-    transform: scale(0.9) !important;
-
-    @media (max-width: 768px) {
-      transform: scale(1) !important;
-    }
-
-    @media (max-width: 1174px) {
-      margin-top: 100px !important;
-    }
-  }
 
   .aboutHeader {
-    transform: scale(0.9) !important;
     width: 100% !important;
     max-width: 1085px !important;
     display: flex !important;
     flex-direction: column !important;
     margin: auto !important;
     align-items: center !important;
-
-    @media (max-width: 768px) {
-      transform: inherit !important;
-    }
   }
 
   .aboutNumbers {
-    transform: scale(0.9) !important;
     display: flex !important;
     align-items: center !important;
     margin: 100px auto 100px auto !important;
     width: 100% !important;
 
-    @media (max-width: 768px) {
-      transform: inherit !important;
-    }
 
     .numbers {
       width: 100% !important;
