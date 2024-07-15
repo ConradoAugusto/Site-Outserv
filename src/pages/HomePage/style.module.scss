@@ -112,12 +112,11 @@
           border: 1px solid #fff;
           background: linear-gradient(
             45deg,
-            rgba(237, 252, 246, 0.6) 0%,
-            rgba(227, 235, 246, 0.6) 50%,
+            rgb(237, 252, 246) 0%,
+            rgba(227, 235, 246, 0.733) 50%,
             rgba(235, 235, 238, 0.6) 100%
           );
           backdrop-filter: blur(8px) !important;
-          -webkit-backdrop-filter: blur(8px) !important; 
           bottom: 104px !important;
           right: 52px !important;
           width: 100%;
@@ -331,6 +330,14 @@
     position: absolute !important;
     right: -329px !important;
     top: 114px !important;
+
+    @media (max-width: 1469px) {
+    right: -290px !important;
+    }
+
+    @media (max-width: 1372px) {
+      right: -260px !important;
+      }
     
     @media (max-width: 1268px) {
       padding: 0px 65px 0px 0px !important;

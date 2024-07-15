@@ -60,7 +60,7 @@ export const CarrosselLogos = () => {
     logosSlide.parentNode.appendChild(firstClone);
 
     const handleAnimation = () => {
-      const slideWidth = logosSlide.scrollWidth / 2;
+      const slideWidth = logosSlide.scrollWidth / 1;
       logosSlide.parentNode.scrollLeft += 1;
 
       if (logosSlide.parentNode.scrollLeft >= slideWidth) {

@@ -44,12 +44,11 @@ import smartphone from "../../assets/smartphone.webp";
 import AccordionItem from "../../../components/AccordionItem";
 import { CardServices } from "../../../components/CardServices";
 import { CardServiceItem } from "../../../components/CardServiceItem";
-import { CompanyComment } from "../../../components/CompanyComment";
+
 
 import GRAND from "../../assets/GRAND.webp";
 
 import { Form } from "../../../components/Form";
-import imageComment from "../../assets/comments/imageCliente.jpeg";
 import ProgressBar from "../../../components/ProgressBar";
 import { PortalVideo } from "../../../components/PortalVideo";
 import { OffCanvasContato } from "../../../components/OffCanvasContato";
@@ -57,6 +56,7 @@ import CookieConsent from "../../../components/CookieModal/CookieConsent";
 import { NumbersCounters } from "../../../components/NumbersCounters";
 import ParallaxComponent from "../../../components/ParallaxComponent";
 import { CarrosselLogos } from "../../../components/CarrosselLogos";
+import CommentCarousel from "../../../components/CommentCarousel";
 
 export const HomePage = () => {
   const [currentTheme, setCurrentTheme] = useState("PortalLight");
@@ -771,25 +771,7 @@ export const HomePage = () => {
         </div>
       </section>
 
-      <section
-        id="clientes"
-        className={`${styles.sectionComments} uk-animation-slide-left-medium `}
-        uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 300;"
-      >
-        <div className="container">
-          <div className="d-flex justify-content-center mb-3">
-            <Tag content={"O QUE DIZEM OS CLIENTES"} />
-          </div>
-          <CompanyComment
-            image={imageComment}
-            content={
-              "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatursit consequuntur ipsum doloribus minus delectus, ad dicta undeaccusantium omnis sapiente quaerat ratione voluptatem reprehenderit totam nisi. Accusamus, atque quaerat?m"
-            }
-            cliente={"Madero"}
-            cargo={"CEO - Madero"}
-          />
-        </div>
-      </section>
+      <CommentCarousel/>
 
       <section
         className={`${styles.sectionArrows} uk-animation-slide-right-medium`}

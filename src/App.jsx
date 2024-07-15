@@ -3,20 +3,28 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { useEffect, useState } from "react";
 import AnimatedCursor from "react-animated-cursor";
+import Hotjar from "@hotjar/browser";
 
 function App() {
-  const [isCursorEnabled, setIsCursorEnabled] = useState(window.innerWidth >= 1000);
+  const [isCursorEnabled, setIsCursorEnabled] = useState(
+    window.innerWidth >= 1000
+  );
 
   useEffect(() => {
     const handleResize = () => {
       setIsCursorEnabled(window.innerWidth >= 1000);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const siteId = 5059898;
+  const hotjarVersion = 6;
+
+  Hotjar.init(siteId, hotjarVersion);
 
   return (
     <>
@@ -31,15 +39,15 @@ function App() {
           showSystemCursor={false}
           hasBlendMode={false}
           outerStyle={{
-            border: '3px solid var(--colorPrimary)',
+            border: "3px solid var(--colorPrimary)",
             zIndex: "99999999",
           }}
           innerStyle={{
-            backgroundColor: 'var(--colorPrimary)',
+            backgroundColor: "var(--colorPrimary)",
             zIndex: "99999999",
           }}
           style={{
-            mixBlendMode: 'difference',
+            mixBlendMode: "difference",
             zIndex: "99999999",
           }}
         />

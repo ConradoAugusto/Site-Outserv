@@ -54,6 +54,16 @@
   .redesSociais {
     display: flex;
     gap: 12px;
+    
+    svg:hover {
+      stroke: var(--colorPrimary) !important;
+    }
+  }
+
+  .cardItem {
+    svg:hover {
+      stroke: var(--colorPrimary) !important;
+    }
   }
 
   .navbar {
