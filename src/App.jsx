@@ -21,7 +21,7 @@ function App() {
     };
   }, []);
 
-  const siteId = 5059898;
+  const siteId = 5062998;
   const hotjarVersion = 6;
 
   Hotjar.init(siteId, hotjarVersion);

@@ -125,9 +125,13 @@ export const HomePage = () => {
     const currentVideoRef = videoRefs.current.find(
       (ref) => ref && ref.dataset.key === currentImage
     );
+    console.log(currentVideoRef);
 
     if (currentVideoRef && window.innerWidth > 1000) {
       currentVideoRef.play();
+    }else {
+      currentVideoRef.pause();
+      currentVideoRef.currentTime = 0;
     }
   }, [currentImage, videoRefs]);
 
