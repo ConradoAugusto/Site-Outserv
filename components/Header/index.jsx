@@ -127,10 +127,10 @@ export const Header = () => {
                   className={`paragraph bold linkNavbar noWrap ${
                     styles.linkNav
                   } ${scrolled ? styles.scrolled : styles.default}`}
-                  onClick={(e) => handleLinkClick(e, "recursos")}
-                  aria-label="Recursos"
+                  onClick={(e) => handleLinkClick(e, "servicos")}
+                  aria-label="Serviços"
                 >
-                  Recursos
+                  Serviços
                 </Link>
                 <Link
                   className={`paragraph bold linkNavbar noWrap ${

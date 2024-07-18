@@ -250,7 +250,6 @@ export const HomePage = () => {
                     className={`${styles.tag3} cosmosLeft`}
                     style={{ animationDelay: "9s" }}
                   >
-                    <Tag content={"Admissões"} />
                   </div>
                   <div
                     className={`${styles.tag4} cosmosRight`}
@@ -262,7 +261,6 @@ export const HomePage = () => {
                     className={`${styles.tag5} cosmosLeft`}
                     style={{ animationDelay: ".1s" }}
                   >
-                    <Tag content={"Treinamentos"} />
                   </div>
                   <div
                     className={`${styles.tag6} cosmosBottom`}
@@ -300,10 +298,10 @@ export const HomePage = () => {
               className="accordion z-3 uk-animation-slide-left-medium"
               style={{ width: "30%" }}
               id="accordionDiv"
-              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 300;"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
             >
               <AccordionItem
-                data={"delay: 300;"}
+                data={"delay: 50;"}
                 icon={<IconUsersPlus stroke={2} />}
                 onClick={() => {
                   handleImageChange("admissao");
@@ -318,7 +316,7 @@ export const HomePage = () => {
                 }
               />
               <AccordionItem
-                data={"delay: 400;"}
+                data={"delay: 100;"}
                 icon={<IconApps stroke={2} />}
                 onClick={() => {
                   handleImageChange("app");
@@ -333,7 +331,7 @@ export const HomePage = () => {
                 }
               />
               <AccordionItem
-                data={"delay: 500;"}
+                data={"delay: 150;"}
                 icon={<IconPencilBolt stroke={2} />}
                 onClick={() => {
                   handleImageChange("agilidade");
@@ -348,7 +346,7 @@ export const HomePage = () => {
                 }
               />
               <AccordionItem
-                data={"delay: 600;"}
+                data={"delay: 200;"}
                 icon={<IconBolt stroke={2} />}
                 onClick={() => {
                   handleImageChange("ged");
@@ -363,7 +361,7 @@ export const HomePage = () => {
                 }
               />
               <AccordionItem
-                data={"delay: 700;"}
+                data={"delay: 250;"}
                 icon={<IconShieldHalf stroke={2} />}
                 onClick={() => {
                   handleImageChange("epi");
@@ -378,7 +376,7 @@ export const HomePage = () => {
                 }
               />
               <AccordionItem
-                data={"delay: 800;"}
+                data={"delay: 300;"}
                 icon={<IconUsersPlus stroke={2} />}
                 onClick={() => {
                   handleImageChange("registro");
@@ -395,7 +393,7 @@ export const HomePage = () => {
             </div>
             <div
               className="w-50 uk-animation-slide-right-medium"
-              uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay: 700;"
+              uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay: 100;"
             >
               {Object.keys(imageMap).map((key, index) => (
                 <div
@@ -635,13 +633,13 @@ export const HomePage = () => {
       </section>
 
       <section
-        id="recursos"
+        id="servicos"
         className={`${styles.sectionServices} secondary-bg`}
       >
         <div className="container">
           <div
             className="uk-animation-slide-right-medium"
-            uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay: 700;"
+            uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay: 100;"
           >
             <div
               className={`${styles.tag} d-flex justify-content-center text-center uk-animation-scale-up`}
@@ -650,7 +648,7 @@ export const HomePage = () => {
                 type="button"
                 className="btn tagDark text-white paragraph bold"
               >
-                PORQUE A OUTSERV
+                Serviços
               </button>
             </div>
 
@@ -675,7 +673,7 @@ export const HomePage = () => {
 
           <div className="d-flex flex-wrap gap-3 justify-content-center mb-5">
             <CardServices
-              data={"delay: 300;"}
+              data={"delay: 50;"}
               title="CONSULTORIA DE ERP"
               text="Excelência e proximidade"
               slogan="Tenha um sistema de gestão customizado e aderente ao seu negócio"
@@ -686,7 +684,7 @@ export const HomePage = () => {
             </CardServices>
 
             <CardServices
-              data={"delay: 500;"}
+              data={"delay: 70;"}
               title="BPO EM RH"
               text="Foco nos negócios"
               slogan="Cuidamos da sua operação administrativa e financeira"
@@ -697,7 +695,7 @@ export const HomePage = () => {
             </CardServices>
 
             <CardServices
-              data={"delay: 700;"}
+              data={"delay: 100;"}
               title="BODY SHOP"
               text="Elimine riscos trabalhistas"
               slogan="Selecionamos e treinamos os melhores especialistas do mercado"
@@ -719,12 +717,12 @@ export const HomePage = () => {
         </div>
         <div
           className={`${styles.container} container uk-animation-slide-left-medium`}
-          uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
+          uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
         >
           <div className={styles.aboutHeader}>
             <div
               className="uk-animation-slide-left-medium"
-              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 200;"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
             >
               <h2 className="title one text-center">
                 Nossos <span className=" title one textLight">números</span>
@@ -732,7 +730,7 @@ export const HomePage = () => {
             </div>
             <div
               className="uk-animation-slide-left-medium"
-              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 300;"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 150;"
             >
               <p className="paragraph text-center">
                 Presente em todo o Brasil, a{" "}
@@ -750,7 +748,7 @@ export const HomePage = () => {
               <NumbersCounters
                 text={"Quantidade de clientes atendidos"}
                 number={150}
-                delayAnimation={100}
+                delayAnimation={50}
                 delay={0.1}
                 className={"number"}
               />
@@ -758,7 +756,7 @@ export const HomePage = () => {
               <NumbersCounters
                 text={"Número de vidas processadas"}
                 number={20000}
-                delayAnimation={200}
+                delayAnimation={70}
                 delay={0.2}
                 className={"number"}
               />
@@ -766,7 +764,7 @@ export const HomePage = () => {
               <NumbersCounters
                 text={"Quantidade de projetos realizados"}
                 number={800}
-                delayAnimation={300}
+                delayAnimation={100}
                 delay={0.3}
                 className={"number"}
               />
@@ -778,13 +776,14 @@ export const HomePage = () => {
       <CommentCarousel/>
 
       <section
-        className={`${styles.sectionArrows} uk-animation-slide-right-medium`}
-        uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay: 600;"
+        className={`${styles.sectionArrows} uk-animation-slide-left-medium`}
+        uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
       >
         <div className="container">
           <div className={`${styles.arrows} d-flex inverted`}>
             <svg
-              className="bgArrowSecondary"
+              className="bgArrowSecondary uk-animation-slide-left-medium"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
               width="146"
               height="223"
               viewBox="0 0 146 223"
@@ -797,7 +796,9 @@ export const HomePage = () => {
               />
             </svg>
             <svg
+            classname="uk-animation-slide-left-medium"
               width="146"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 130;"
               height="223"
               viewBox="0 0 146 223"
               fill="none"
@@ -809,7 +810,9 @@ export const HomePage = () => {
               />
             </svg>{" "}
             <svg
+            classname="uk-animation-slide-left-medium"
               width="146"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 110;"
               height="223"
               viewBox="0 0 146 223"
               fill="none"
@@ -821,7 +824,9 @@ export const HomePage = () => {
               />
             </svg>{" "}
             <svg
+            classname="uk-animation-slide-left-medium"
               width="146"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 90;"
               height="223"
               viewBox="0 0 146 223"
               fill="none"
@@ -833,7 +838,9 @@ export const HomePage = () => {
               />
             </svg>{" "}
             <svg
+            classname="uk-animation-slide-left-medium"
               width="146"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 70;"
               height="223"
               viewBox="0 0 146 223"
               fill="none"
@@ -845,7 +852,9 @@ export const HomePage = () => {
               />
             </svg>{" "}
             <svg
+            classname="uk-animation-slide-left-medium"
               width="146"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
               height="223"
               viewBox="0 0 146 223"
               fill="none"

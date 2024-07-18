@@ -3,7 +3,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
   100% {
     transform: translateY(0);
@@ -15,7 +15,7 @@
 //  style={{animationDelay:"5s"}}
 
 .levitate {
-  animation: levitation 2s ease-in-out infinite;
+  animation: levitation 4s ease-in-out infinite;
 }
 
 //   ____________________________________________________________
@@ -26,8 +26,8 @@
     transform: translatex(0);
   }
   10% {
-    transform: translateY(-10px);
-    transform: translatex(-30px);
+    transform: translateY(-5px);
+    transform: translatex(-15px);
   }
   20% {
     transform: translateY(0);
@@ -44,7 +44,7 @@
 //  style={{animationDelay:"5s"}}
 
 .cosmosRight {
-  animation: cosmosRight 20s ease-in-out infinite;
+  animation: cosmosRight 40s ease-in-out infinite;
 }
 
 @keyframes cosmosLeft {
@@ -53,8 +53,8 @@
     transform: translate(0);
   }
   10% {
-    transform: translateY(-10px);
-    transform: translate(30px);
+    transform: translateY(-5px);
+    transform: translate(15px);
   }
   20% {
     transform: translateY(0);
@@ -71,7 +71,7 @@
 //  style={{animationDelay:"5s"}}
 
 .cosmosLeft {
-  animation: cosmosLeft 20s ease-in-out infinite;
+  animation: cosmosLeft 40s ease-in-out infinite;
 }
 
 @keyframes cosmosTop {
@@ -80,8 +80,8 @@
     transform: translate(0);
   }
   10% {
-    transform: translateY(-10px);
-    transform: translatey(30px);
+    transform: translateY(-5px);
+    transform: translatey(15px);
   }
   20% {
     transform: translateY(0);
@@ -98,7 +98,7 @@
 //  style={{animationDelay:"5s"}}
 
 .cosmosTop {
-  animation: cosmosTop 20s ease-in-out infinite;
+  animation: cosmosTop 40s ease-in-out infinite;
 }
 
 @keyframes cosmosBottom {
@@ -107,8 +107,8 @@
     transform: translate(0);
   }
   10% {
-    transform: translateY(-10px);
-    transform: translatey(-30px);
+    transform: translateY(-5px);
+    transform: translatey(-15px);
   }
   20% {
     transform: translateY(0);
@@ -125,7 +125,7 @@
 //  style={{animationDelay:"5s"}}
 
 .cosmosBottom {
-  animation: cosmosBottom 20s ease-in-out infinite;
+  animation: cosmosBottom 40s ease-in-out infinite;
 }
 
 // ________________________________________________________
@@ -136,8 +136,8 @@
     transform: translatex(0);
   }
   50% {
-    transform: translateY(-10px);
-    transform: translatex(-100px);
+    transform: translateY(-5px);
+    transform: translatex(-20px);
   }
   100% {
     transform: translateY(0);
@@ -150,7 +150,7 @@
 //  style={{animationDelay:"5s"}}
 
 .circleRight {
-  animation: circleRight 30s ease-in-out infinite;
+  animation: circleRight 60s ease-in-out infinite;
 }
 
 @keyframes circleLeft {
@@ -159,8 +159,8 @@
     transform: translate(0);
   }
   50% {
-    transform: translateY(-10px);
-    transform: translate(100px);
+    transform: translateY(-5px);
+    transform: translate(20px);
   }
 
   100% {
@@ -174,5 +174,5 @@
 //  style={{animationDelay:"5s"}}
 
 .circleLeft {
-  animation: circleLeft 30s ease-in-out infinite;
+  animation: circleLeft 60s ease-in-out infinite;
 }

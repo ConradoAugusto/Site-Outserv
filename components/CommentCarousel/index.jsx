@@ -38,9 +38,8 @@ const CommentCarousel = () => {
 
   return (
     <section
-      id="clientes"
       className={`${styles.sectionComments} uk-animation-slide-left-medium`}
-      uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 300;"
+      uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
     >
       <div className={`${styles.containerSlide} container`}>
         <div className="d-flex justify-content-center mb-3">

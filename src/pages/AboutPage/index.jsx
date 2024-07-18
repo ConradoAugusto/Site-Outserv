@@ -27,6 +27,7 @@ import animationMascote from "../../assets/mascote.gif";
 
 import { OffCanvasContato } from "../../../components/OffCanvasContato";
 import { NumbersCounters } from "../../../components/NumbersCounters";
+import CommentCarousel from "../../../components/CommentCarousel";
 
 export const AboutPage = () => {
   const carrosselMap = {
@@ -136,14 +137,14 @@ export const AboutPage = () => {
             <div>
               <h2
                 className="title one uk-animation-slide-left-medium"
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
+                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
               >
                 Nossos <span className="textLight">números</span>
               </h2>
             </div>
             <div
               className="uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 300;"
+              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
             >
               <p className="paragraph text-center">
                 Presente em todo o Brasil, a Outserv oferece soluções de RH e
@@ -158,7 +159,7 @@ export const AboutPage = () => {
               <NumbersCounters
                 text={"Quantidade de clientes atendidos"}
                 number={150}
-                delayAnimation={100}
+                delayAnimation={50}
                 delay={0.1}
                 className={"numberAbout"}
               />
@@ -166,7 +167,7 @@ export const AboutPage = () => {
               <NumbersCounters
                 text={"Número de vidas processadas"}
                 number={20000}
-                delayAnimation={200}
+                delayAnimation={70}
                 delay={0.2}
                 className={"numberAbout"}
               />
@@ -174,7 +175,7 @@ export const AboutPage = () => {
               <NumbersCounters
                 text={"Quantidade de projetos realizados"}
                 number={800}
-                delayAnimation={300}
+                delayAnimation={90}
                 delay={0.3}
                 className={"numberAbout"}
               />
@@ -191,7 +192,7 @@ export const AboutPage = () => {
           <div className={styles.divParagraph}>
             <div
               className="uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
+              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
             >
               <h2 className="title one secondary">
                 Nossa <span className="textLight">história</span>
@@ -201,7 +202,7 @@ export const AboutPage = () => {
               <div className={styles.paragraph}>
                 <p
                   className="paragraph gray-8 uk-animation-slide-left-medium"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 200;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
                 >
                   “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                   hendrerit nisi sed sollicitudin pellentesque. Nunc posuere
@@ -213,7 +214,7 @@ export const AboutPage = () => {
                 </p>
                 <p
                   className="paragraph gray-8 uk-animation-slide-left-medium"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 400;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 150;"
                 >
                   “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                   hendrerit nisi sed sollicitudin pellentesque. Nunc posuere
@@ -228,7 +229,7 @@ export const AboutPage = () => {
               <div className={styles.paragraph}>
                 <p
                   className="paragraph gray-8 uk-animation-slide-left-medium"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 600;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 200;"
                 >
                   “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                   hendrerit nisi sed sollicitudin pellentesque. Nunc posuere
@@ -241,7 +242,7 @@ export const AboutPage = () => {
 
                 <p
                   className="paragraph gray-8 uk-animation-slide-left-medium"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 800;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 250;"
                 >
                   “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                   hendrerit nisi sed sollicitudin pellentesque. Nunc posuere
@@ -263,7 +264,7 @@ export const AboutPage = () => {
             <div>
               <div
                 className={`${styles.arrowsTop} d-flex inverted uk-animation-slide-right-medium"`}
-                data-uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay: 300;"
+                data-uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay: 50;"
               >
                 <svg
                   className="bgArrowSecondary"
@@ -341,7 +342,7 @@ export const AboutPage = () => {
               </div>
               <div
                 className={`${styles.movie} uk-animation-slide-bottom-medium"`}
-                data-uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true; delay: 600;"
+                data-uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true; delay: 50;"
               >
                 <iframe
                   className={styles.iframeMovie}
@@ -352,7 +353,7 @@ export const AboutPage = () => {
               </div>
               <div
                 className={`${styles.arrowsBottom} d-flex uk-animation-slide-left-medium"`}
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 200;"
+                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
               >
                 <svg
                   className="bgArrowSecondary"
@@ -440,7 +441,7 @@ export const AboutPage = () => {
               <div className={styles.textBussiness}>
                 <h4
                   className="uk-animation-slide-left-medium title sobre gray-8"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 800;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
                 >
                   “Nosso compromisso é com a
                   <span className="textLight">
@@ -450,7 +451,7 @@ export const AboutPage = () => {
                 </h4>
                 <p
                   className="uk-animation-slide-left-medium paragraph textHeroAbout gray-8"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 1000;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
                 >
                   Acreditamos que o avanço da nossa empresa está intrinsecamente
                   ligado ao desenvolvimento contínuo de nossos colaboradores,
@@ -460,7 +461,7 @@ export const AboutPage = () => {
               <div className={styles.textMission}>
                 <p
                   className="uk-animation-slide-left-medium paragraph textHeroAbout gray-8"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 200;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 150;"
                 >
                   Nossa <strong>missão</strong> é criar tecnologias inovadoras
                   que potencializem o sucesso e crescimento de nosso clientes,
@@ -473,7 +474,7 @@ export const AboutPage = () => {
 
                 <p
                   className="uk-animation-slide-left-medium paragraph textHeroAbout gray-8"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 400;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 200;"
                 >
                   Ser <strong>reconhecida como inovadora no setor</strong> de
                   tecnologia,BPO impulsionando o progresso e transformando
@@ -485,7 +486,7 @@ export const AboutPage = () => {
 
                 <p
                   className="uk-animation-slide-left-medium paragraph textHeroAbout gray-8"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 600;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 250;"
                 >
                   <strong>
                     Pautamos nossa ações na transparência, ética e
@@ -500,7 +501,7 @@ export const AboutPage = () => {
             <div className={styles.commitment}>
               <div
                 className={`${styles.imgHeader} uk-animation-slide-left-medium"`}
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 200;"
+                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 300;"
               >
                 <img
                   className={styles.smallerAndGraeter}
@@ -517,7 +518,7 @@ export const AboutPage = () => {
                     <img
                       className="uk-animation-slide-bottom-medium"
                       data-uk-scrollspy={`cls: uk-animation-slide-bottom-medium; repeat: true; delay: ${
-                        200 * (index + 1)
+                        50 * (index + 1)
                       };`}
                       key={key}
                       src={carrosselMap[key]}
@@ -530,6 +531,8 @@ export const AboutPage = () => {
           </div>
         </div>
       </section>
+      <CommentCarousel/>
+      <br />
       <div className={styles.form}>
         <Form />
       </div>

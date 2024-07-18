@@ -136,7 +136,7 @@ export const Form = () => {
         <div className={styles.containerForm}>
           <div
             className="text-center col-md-12 uk-animation-slide-left-medium"
-            data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
+            data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
           >
             <h2 className="title two whiteColor">
               Vamos <span>começar?</span>
@@ -152,7 +152,7 @@ export const Form = () => {
           <form ref={form} onSubmit={sendEmail} className={styles.formContent}>
             <div
               className="form-group col-md-12 uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 200;"
+              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
             >
               <label
                 className="whiteColor  w-100 labelText inputText"
@@ -171,7 +171,7 @@ export const Form = () => {
             </div>
             <div
               className="form-group col-md-12 uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 300;"
+              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 150;"
             >
               <label
                 className="whiteColor  w-100 labelText inputText"
@@ -200,7 +200,7 @@ export const Form = () => {
             {mostrarTextarea && (
               <div
                 className="form-group col-md-12 uk-animation-slide-left-medium"
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 400;"
+                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 200;"
               >
                 <label
                   className="whiteColor  w-100 labelText inputText"
@@ -219,7 +219,7 @@ export const Form = () => {
             )}
             <div
               className="form-group col-md-12 uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 500;"
+              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 250;"
             >
               <label
                 className="whiteColor  w-100 labelText inputText"
@@ -238,7 +238,7 @@ export const Form = () => {
             </div>
             <div
               className="form-group col-md-12 uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 600;"
+              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 300;"
             >
               <label
                 className="whiteColor  w-100 labelText inputText"
@@ -257,7 +257,7 @@ export const Form = () => {
             </div>
             <div
               className="form-group col-md-12 uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 700;"
+              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 350;"
             >
               <label
                 className="whiteColor  w-100 labelText inputText"
@@ -276,7 +276,7 @@ export const Form = () => {
             </div>
             <div
               className="form-group col-md-12 uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 800;"
+              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 400;"
             >
               <label
                 className="whiteColor  w-100 labelText inputText"
@@ -309,7 +309,7 @@ export const Form = () => {
 
             <p
               className="paragraph textAcordion whiteColor col-md-12 uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 900;"
+              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 450;"
             >
               A Outserv utiliza as informações de contato que você nos fornece
               para enviar atualizações sobre nossos produtos e serviços. Você
@@ -330,8 +330,8 @@ export const Form = () => {
             <button
               type="submit"
               disabled={isButtonDisabled}
-              className="btn bold faleconosco form-group col-md-12 uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 1000;"
+              className="btn bold faleconosco form-group col-md-12 "
+             
             >
               {isLoading ? "Enviando..." : "Enviar"}
             </button>

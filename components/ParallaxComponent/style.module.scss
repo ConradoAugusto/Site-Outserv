@@ -1,16 +1,14 @@
 .sectionPortalTheme {
   position: relative;
   padding: 50px 0 0 0 !important;
-  
+
   @media (max-width: 600px) {
     padding: 130px 0 0 0 !important;
   }
 
   .portalTheme {
-    width: 100% !important;
-    max-width: 1040px !important;
+    max-width: 1200px !important;
     position: relative !important;
-    height: fit-content !important;
     top: -200px !important;
     z-index: 34;
 
@@ -29,13 +27,12 @@
       height: fit-content;
       top: -77px;
       z-index: 34;
-    
 
-    @media (min-width: 648px) {
+      @media (min-width: 648px) {
         top: -120px;
-    }
+      }
 
-    @media (min-width: 768px) AND (max-width: 1000px) {
+      @media (min-width: 768px) AND (max-width: 1000px) {
         top: -196px;
       }
     }

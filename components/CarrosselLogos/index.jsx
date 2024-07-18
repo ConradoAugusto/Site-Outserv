@@ -74,7 +74,7 @@ export const CarrosselLogos = () => {
   }, []);
   
   return (
-    <section className={styles.sectionLogos}>
+    <section id="clientes" className={styles.sectionLogos}>
       <div className={styles.logosWrapper}>
         <div className={styles.logosSlide} ref={logosSlideRef}>
           {empresas.map((logoSrc, index) => (

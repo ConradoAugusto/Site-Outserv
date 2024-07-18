@@ -1,21 +1,15 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./style.module.scss";
-import {
-  IconBrightnessDown,
-  IconMoon2,
-
-} from "@tabler/icons-react";
-
+import { IconBrightnessDown, IconMoon2 } from "@tabler/icons-react";
 
 const ParallaxComponent = ({ currentTheme, themeMap, handleThemeChange }) => {
   const parallaxBackgroundRef = useRef(null);
   const parallaxForegroundRef = useRef(null);
-  
 
   useEffect(() => {
-    const perspective = "2000px",
-      deltaBackground = 110,
-      deltaForeground = 110;
+    const perspective = "8000px",
+      deltaBackground = 200,
+      deltaForeground = 200;
 
     const applyParallax = (e) => {
       const container = parallaxBackgroundRef.current.parentElement,
@@ -50,7 +44,10 @@ const ParallaxComponent = ({ currentTheme, themeMap, handleThemeChange }) => {
   }, [currentTheme]);
 
   return (
-    <section id="themes" className={`${styles.sectionPortalTheme} secondary-bg`}>
+    <section
+      id="themes"
+      className={`${styles.sectionPortalTheme} secondary-bg`}
+    >
       <div className={`${styles.portalTheme} container`}>
         <div id="parallaxContainer" className="hero-animation-img">
           <a href="#">
@@ -77,17 +74,16 @@ const ParallaxComponent = ({ currentTheme, themeMap, handleThemeChange }) => {
                     className="position-absolute hero-elements-img animation-img top-0 start-0"
                   />
                   <figcaption style={{ visibility: "hidden" }}>
-                    {`Imagem da tela de ${key.charAt(0).toUpperCase() + key.slice(1)} do Portal RH da Outserv`}
+                    {`Imagem da tela de ${
+                      key.charAt(0).toUpperCase() + key.slice(1)
+                    } do Portal RH da Outserv`}
                   </figcaption>
                 </div>
               ))}
             </div>
           </a>
         </div>
-        <div
-          className={`${styles.themeBtn} uk-animation-slide-bottom-medium`}
-          uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true; delay: 300;" 
-        >
+        <div className={`${styles.themeBtn}`}>
           <a
             onClick={() => handleThemeChange("PortalLight")}
             type="button"
@@ -119,9 +115,9 @@ const ParallaxComponent = ({ currentTheme, themeMap, handleThemeChange }) => {
             <p className="paragraph text-center">
               Somos especialistas em RH-DP atuação Território Nacional focado na
               Terceirização folha de pagamento – utilizando o
-              <span className="primary"> TOTVS RM Labore</span>, Ponto, E-Social e
-              Portal Web, implantação e manutenção TOTVS (RM), Auditoria Trabalhista
-              e Benefícios.
+              <span className="primary"> TOTVS RM Labore</span>, Ponto, E-Social
+              e Portal Web, implantação e manutenção TOTVS (RM), Auditoria
+              Trabalhista e Benefícios.
             </p>
           </div>
         </div>

@@ -351,8 +351,8 @@ export const ContactPage = () => {
               <button
                 type="submit"
                 disabled={isButtonDisabled}
-                className="btn bold faleconosco text-white uk-scrollspy-inview uk-animation-slide-left-medium"
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 500;"
+                className="btn bold faleconosco text-white"
+
               >
                 {isLoading ? "Enviando..." : "Enviar"}
               </button>
