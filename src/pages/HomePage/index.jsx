@@ -128,7 +128,7 @@ export const HomePage = () => {
     console.log(currentVideoRef);
 
     if (currentVideoRef && window.innerWidth > 1000) {
-      // currentVideoRef.play();
+      currentVideoRef.play();
     }else {
       currentVideoRef.pause();
       currentVideoRef.currentTime = 0;
