@@ -17,9 +17,7 @@ import {
   IconShieldHalf,
 } from "@tabler/icons-react";
 
-import Ellipse1 from "../../assets/Ellipse1.svg";
-import Ellipse2 from "../../assets/Ellipse2.svg";
-import Ellipse3 from "../../assets/Ellipse3.svg";
+import Ellipse from "../../assets/Ellipse.png";
 import hero from "../../assets/hero.jpg";
 import PortalLight_Bcg from "../../assets/PortalImg/theme/portalLight.png";
 import portalLight_element from "../../assets/PortalImg/theme/portalLight_element.png";
@@ -44,7 +42,6 @@ import smartphone from "../../assets/smartphone.webp";
 import AccordionItem from "../../../components/AccordionItem";
 import { CardServices } from "../../../components/CardServices";
 import { CardServiceItem } from "../../../components/CardServiceItem";
-
 
 import GRAND from "../../assets/GRAND.webp";
 
@@ -125,11 +122,10 @@ export const HomePage = () => {
     const currentVideoRef = videoRefs.current.find(
       (ref) => ref && ref.dataset.key === currentImage
     );
-    console.log(currentVideoRef);
 
     if (currentVideoRef && window.innerWidth > 1000) {
       currentVideoRef.play();
-    }else {
+    } else {
       currentVideoRef.pause();
       currentVideoRef.currentTime = 0;
     }
@@ -145,6 +141,24 @@ export const HomePage = () => {
       foreground: PortalDark_element,
     },
   };
+
+  const [buttonContent, setButtonContent] = useState('Agendar demonstração');
+
+  const updateContent = () => {
+      if (window.innerWidth < 1044) {
+          setButtonContent('Fale com consultor');
+      } else {
+          setButtonContent('Agendar demonstração');
+      }
+  };
+
+  useEffect(() => {
+      updateContent();
+      window.addEventListener('resize', updateContent);
+      return () => {
+          window.removeEventListener('resize', updateContent);
+      };
+  }, []);
 
   return (
     <DefaultTemplate className={styles.homePage}>
@@ -169,11 +183,11 @@ export const HomePage = () => {
               gestão com tecnologia, inovação e estratégia.
             </p>
             <ButtonPrimary
-              className="faleconosco paragraph bold "
+              className="faleconosco paragraph bold responsiveContent"
               href="https://api.whatsapp.com/send?phone=5519996844020&text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços."
               target="_blank"
               type="button"
-              content="Agendar demonstração"
+              content={buttonContent}
             />
           </div>
           <div
@@ -181,14 +195,7 @@ export const HomePage = () => {
             uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay:100;"
           >
             <div className={styles.iconContainer}>
-              <img
-                className={`${styles.circle1} circleRight`}
-                src={Ellipse1}
-                alt="circulo"
-                style={{ animationDelay: ".3s" }}
-              />
-              <img className={styles.rosquinha} src={Ellipse3} alt="circulo" />
-              <img src={hero} alt="banner" className={styles.bannerImage} />
+    
               <div className={`${styles.tagsIcons}`}>
                 <div>
                   <div
@@ -249,8 +256,7 @@ export const HomePage = () => {
                   <div
                     className={`${styles.tag3} cosmosLeft`}
                     style={{ animationDelay: "9s" }}
-                  >
-                  </div>
+                  ></div>
                   <div
                     className={`${styles.tag4} cosmosRight`}
                     style={{ animationDelay: "3s" }}
@@ -260,8 +266,7 @@ export const HomePage = () => {
                   <div
                     className={`${styles.tag5} cosmosLeft`}
                     style={{ animationDelay: ".1s" }}
-                  >
-                  </div>
+                  ></div>
                   <div
                     className={`${styles.tag6} cosmosBottom`}
                     style={{ animationDelay: "2s" }}
@@ -272,8 +277,8 @@ export const HomePage = () => {
               </div>
 
               <img
-                className={`${styles.circle2} circleLeft`}
-                src={Ellipse2}
+                className={`${styles.rosquinha} circleLeft`}
+                src={Ellipse}
                 alt="circulo"
               />
             </div>
@@ -301,21 +306,6 @@ export const HomePage = () => {
               uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
             >
               <AccordionItem
-                data={"delay: 50;"}
-                icon={<IconUsersPlus stroke={2} />}
-                onClick={() => {
-                  handleImageChange("admissao");
-                  handleAccordionClick(1);
-                }}
-                isOpen={activeAccordion === 1}
-                key={1}
-                id={"admissao"}
-                header={"Admissão digital descomplicada"}
-                body={
-                  "Modernize suas admissões sem estresse. Diga adeus aos formulários em papel e dê as boas-vindas a uma entrada digital intuitiva."
-                }
-              />
-              <AccordionItem
                 data={"delay: 100;"}
                 icon={<IconApps stroke={2} />}
                 onClick={() => {
@@ -330,6 +320,22 @@ export const HomePage = () => {
                   "Gerencie o tempo com facilidade em qualquer lugar. Nosso app de ponto com localização permite que você monitore e registre presenças com precisão."
                 }
               />
+              <AccordionItem
+                data={"delay: 50;"}
+                icon={<IconUsersPlus stroke={2} />}
+                onClick={() => {
+                  handleImageChange("admissao");
+                  handleAccordionClick(1);
+                }}
+                isOpen={activeAccordion === 1}
+                key={1}
+                id={"admissao"}
+                header={"Admissão digital descomplicada"}
+                body={
+                  "Modernize suas admissões sem estresse. Diga adeus aos formulários em papel e dê as boas-vindas a uma entrada digital intuitiva."
+                }
+              />
+
               <AccordionItem
                 data={"delay: 150;"}
                 icon={<IconPencilBolt stroke={2} />}
@@ -648,7 +654,7 @@ export const HomePage = () => {
                 type="button"
                 className="btn tagDark text-white paragraph bold"
               >
-                Serviços
+                SERVIÇOS
               </button>
             </div>
 
@@ -773,7 +779,7 @@ export const HomePage = () => {
         </div>
       </section>
 
-      <CommentCarousel/>
+      <CommentCarousel />
 
       <section
         className={`${styles.sectionArrows} uk-animation-slide-left-medium`}
@@ -796,7 +802,7 @@ export const HomePage = () => {
               />
             </svg>
             <svg
-            classname="uk-animation-slide-left-medium"
+              className="uk-animation-slide-left-medium"
               width="146"
               uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 130;"
               height="223"
@@ -810,7 +816,7 @@ export const HomePage = () => {
               />
             </svg>{" "}
             <svg
-            classname="uk-animation-slide-left-medium"
+              className="uk-animation-slide-left-medium"
               width="146"
               uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 110;"
               height="223"
@@ -824,7 +830,7 @@ export const HomePage = () => {
               />
             </svg>{" "}
             <svg
-            classname="uk-animation-slide-left-medium"
+              className="uk-animation-slide-left-medium"
               width="146"
               uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 90;"
               height="223"
@@ -838,7 +844,7 @@ export const HomePage = () => {
               />
             </svg>{" "}
             <svg
-            classname="uk-animation-slide-left-medium"
+              className="uk-animation-slide-left-medium"
               width="146"
               uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 70;"
               height="223"
@@ -852,7 +858,7 @@ export const HomePage = () => {
               />
             </svg>{" "}
             <svg
-            classname="uk-animation-slide-left-medium"
+              className="uk-animation-slide-left-medium"
               width="146"
               uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
               height="223"

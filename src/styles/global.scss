@@ -187,7 +187,6 @@
 
   --comment-bg: linear-gradient(
     100deg,
-    rgba(255, 255, 255, 0.7) 0.88%,
     rgba(244, 244, 244, 0.7) 50.44%,
     rgba(237, 237, 237, 0.7) 95.41%
   );
@@ -300,9 +299,8 @@ main {
   margin-top: 76px;
 }
 
-
 .accordion-button::after {
- display: none !important;
+  display: none !important;
 }
 
 .ritual {
@@ -554,4 +552,13 @@ button:focus:not(:focus-visible) {
     font-size: clamp(18px, 4vw, 22px) !important;
     font-weight: 600 !important;
   }
+}
+
+.slick-prev::before,
+.slick-next::before {
+  content: "" !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  visibility: hidden !important;
 }

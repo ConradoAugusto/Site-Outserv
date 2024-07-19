@@ -10,8 +10,8 @@ export const CardServices = ({ children, title, text, slogan, data}) => {
     >
       <div className={styles.card}>
         <div className={styles.content}>
-          <h3 className={`${styles.title} paragraph textDark text bold`}>{title}</h3>
-          <p className={`${styles.text} paragraph textBold`}>{text}</p>
+          <h3 className={`${styles.title} paragraph text textBold`}>{title}</h3>
+          <p className={`${styles.text} paragraph `}>{text}</p>
           <h6 className={`${styles.slogan} paragraph inputText`}>
             {slogan}
           </h6>
@@ -26,4 +26,3 @@ export const CardServices = ({ children, title, text, slogan, data}) => {
     </div>
   );
 };
-

@@ -54,7 +54,7 @@
   display: flex !important;
   border: 1px solid var(--gray4) !important;
   border-radius: 4px !important;
-  object-fit: contain !important;
+  object-fit: cover !important;
   transition: transform 0.5s ease;
   aspect-ratio: 1/1 !important;
 

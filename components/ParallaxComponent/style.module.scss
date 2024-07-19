@@ -2,6 +2,7 @@
   position: relative;
   padding: 50px 0 0 0 !important;
 
+
   @media (max-width: 600px) {
     padding: 130px 0 0 0 !important;
   }
@@ -73,8 +74,13 @@
     .themeText {
       display: flex !important;
       flex-direction: column !important;
-      margin-top: 89px !important;
+      margin-top: 80px !important;
+      margin-bottom: -50px !important;
       gap: 36px !important;
+
+      @media (min-width: 375px) AND (max-width: 650px) {
+        margin-bottom: -150px !important;
+      }
 
       h2,
       p {

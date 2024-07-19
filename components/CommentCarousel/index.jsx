@@ -10,11 +10,11 @@ import { IconChevronLeft,IconChevronRight } from '@tabler/icons-react';
 
 const comments = [
   {
-    image: madero,
+    image: "https://amanha.com.br/images/u/171/Junior-Durski_fundador-da-Rede-Madero.jpg",
     content:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolores similique eius inventore expedita tenetur. Ea blanditiis, aut laudantium tenetur, magni voluptatibus qui voluptas, eos at incidunt eaque! Molestiae, laudantium!",
-    cliente: "JBS",
-    cargo: "Gerente de RH - JBS",
+    cliente: "Madero",
+    cargo: "CEO - Madero",
   },
   {
     image: "https://touc.com.br/assets/img/cta.png",

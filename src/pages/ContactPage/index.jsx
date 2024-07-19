@@ -148,7 +148,7 @@ export const ContactPage = () => {
           <div className={styles.form}>
             <div className="text-center">
               <h2
-                className="title two whiteColor w-100 uk-scrollspy-inview uk-animation-slide-left-medium"
+                className="title two whiteColor w-100 uk-scrollspy-inview uk-animation-slide-left-medium "
                 data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 200;"
               >
                 Vamos <span>começar?</span>

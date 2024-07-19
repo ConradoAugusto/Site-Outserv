@@ -1,15 +1,13 @@
-
 .heroSection {
   background: var(--neon) !important;
   height: 760px !important;
-  background-image: url("/src/assets/hero_bcg_home.png")!important;
-  background-size:cover !important;
+  background-image: url("/src/assets/hero_bcg_home.png") !important;
+  background-size: cover !important;
   background-position: right !important;
   background-repeat: no-repeat !important;
 
-
   @media (max-width: 999px) {
-    height: 579px !important
+    height: 579px !important;
   }
   @media (max-width: 768px) {
     height: 570px !important;
@@ -18,7 +16,6 @@
   .heroContainer {
     height: 100% !important;
     max-height: 1012px !important;
-
 
     @media (max-width: 999px) {
       transform: inherit !important;
@@ -57,7 +54,7 @@
       justify-content: center !important;
       display: flex !important;
       margin-top: -49px !important;
-      transform: scale(.8) !important;
+      transform: scale(0.8) !important;
       right: -131px !important;
 
       @media (max-width: 1678px) {
@@ -104,23 +101,12 @@
           left: 70px !important;
           bottom: 48px !important;
           z-index: 1 !important;
-          
         }
         .rosquinha {
           position: absolute !important;
-          border-radius: 472.103px;
-          border: 1px solid #fff;
-          background: linear-gradient(
-            45deg,
-            rgb(237, 252, 246) 0%,
-            rgba(227, 235, 246, 0.733) 50%,
-            rgba(235, 235, 238, 0.6) 100%
-          );
-          backdrop-filter: blur(8px) !important;
-          bottom: 104px !important;
-          right: 52px !important;
-          width: 100%;
-          max-width: 432px;
+          bottom: 24px !important;
+          right: -4px !important;
+          max-width: 569px !important;
           z-index: 2 !important;
         }
 
@@ -200,8 +186,8 @@
           .iconFlutuante5 {
             position: absolute !important;
             z-index: 3 !important;
-            bottom: 29px !important;
-            left: 219px !important;
+            bottom: 7px !important;
+            left: 228px !important;
 
             & > div {
               background: var(--colorPurple);
@@ -308,15 +294,12 @@
   }
 }
 
-
-
 .sectionConheça {
   display: flex !important;
   transform: scale(0.92) !important;
   @media (max-width: 1000px) {
     display: none !important;
   }
-
 
   .demo {
     height: 100% !important;
@@ -332,13 +315,13 @@
     top: 114px !important;
 
     @media (max-width: 1469px) {
-    right: -290px !important;
+      right: -290px !important;
     }
 
     @media (max-width: 1372px) {
       right: -260px !important;
-      }
-    
+    }
+
     @media (max-width: 1268px) {
       padding: 0px 65px 0px 0px !important;
     }
@@ -393,7 +376,6 @@
   .tag {
     margin-top: 100px !important;
 
-
     @media (max-width: 768px) {
       margin-top: 60px !important;
       transform: inherit !important;
@@ -433,7 +415,6 @@
   }
 
   .aboutHeader {
-
     width: 100% !important;
     max-width: 1085px !important;
     display: flex !important;
@@ -469,9 +450,6 @@
     }
   }
 }
-
-
-
 
 .sectionComments {
   display: flex !important;

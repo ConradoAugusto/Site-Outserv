@@ -1,8 +1,7 @@
-.slick-slider  {
+.slick-slider {
   position: relative !important;
   z-index: 999 !important;
 }
-
 
 .content {
   display: flex !important;
@@ -38,12 +37,12 @@
   @media (min-width: 768px) and (max-width: 1024px) {
     gap: 30px !important;
 
-    p{
+    p {
       padding: 10px;
-      max-height: 220px; 
-      overflow-y: auto; 
+      max-height: 220px;
+      overflow-y: auto;
     }
-     }
+  }
 }
 
 .imageComment {
@@ -60,10 +59,6 @@
 
 .prevArrow {
   left: -30px !important;
-}
-
-.slick-prev:before, .slick-next:before {
- font-size: 0 !important;
 }
 
 .containerSlide {

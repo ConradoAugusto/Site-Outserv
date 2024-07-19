@@ -68,7 +68,7 @@ export const CarrosselLogos = () => {
       }
     };
 
-    const interval = setInterval(handleAnimation, 20);
+    const interval = setInterval(handleAnimation, 2);
 
     return () => clearInterval(interval);
   }, []);

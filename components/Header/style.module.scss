@@ -236,7 +236,7 @@
   &.open {
     opacity: 1;
     pointer-events: auto;
-    overflow-y: hidden !important;
+    overflow-y: none !important;
   }
 }
 

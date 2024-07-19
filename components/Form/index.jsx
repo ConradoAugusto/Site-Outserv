@@ -138,10 +138,10 @@ export const Form = () => {
             className="text-center col-md-12 uk-animation-slide-left-medium"
             data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
           >
-            <h2 className="title two whiteColor">
+            <h2 className="title two whiteColor mt-5">
               Vamos <span>começar?</span>
             </h2>
-            <p className="paragraph whiteColor">
+            <p className="paragraph whiteColor mb-5">
               Procurando por uma <span>solução completa em RH e software</span>?
               Com a Outserv, transforme desafios em oportunidades. Nossa
               expertise em consultoria Totvs e tecnologia de ponta atende
