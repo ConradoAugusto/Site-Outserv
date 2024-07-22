@@ -10,8 +10,10 @@
   width: fit-content !important;
   font-size: clamp(12px, 1.5vw, 16px) !important;
   flex-wrap: nowrap !important;
-  transition: 5s !important;
+  transition: 0.5s !important;
   cursor: pointer !important;
+
+ 
 
   &.light {
     border: 1px solid var(--gray4) !important;
@@ -34,7 +36,7 @@
     color: var(--gray2) !important;
 
     &:hover {
-      transition: 5s !important;
+      transition: 0.5s !important;
       background: var(--btnDarkLinearHover) !important;
     }
   }
@@ -47,9 +49,21 @@
 
     &:hover {
       background: var(--colorPrimary) !important;
-      font-weight: 600 !important;
       transition: 0.3s !important;
       color: var(--gray1) !important;
+    }
+  }
+  &.danger {
+    border: 1px solid var(--colorDanger) !important;
+    background: transparent !important;
+    color: var(--colorDanger) !important;
+    transition: 0.3s !important;
+
+
+    &:hover {
+      transition: 0.3s !important;
+      background: var(--colorDanger) !important;
+      color: var(--colorWhite) !important;
     }
   }
 
@@ -62,7 +76,6 @@
     cursor: initial !important;
     height: auto !important;
     letter-spacing: 2.16px !important;
-
   }
 
   &.tagDark {

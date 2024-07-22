@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { useEffect, useState } from "react";
 import AnimatedCursor from "react-animated-cursor";
+import { Cookies } from "../components/ModalCookies/Cookies";
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
           }}
         />
       )}
+      <Cookies/>
     </>
   );
 }

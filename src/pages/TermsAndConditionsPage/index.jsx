@@ -1,4 +1,4 @@
-import CookieConsent from "../../../components/CookieModal/CookieConsent";
+
 import { DefaultTemplate } from "../../../components/DefaultTemplate";
 import { OffCanvasContato } from "../../../components/OffCanvasContato";
 import { Tag } from "../../../components/buttons/Tag";
@@ -27,7 +27,7 @@ export const TermsAndConditionsPage = () => {
   return (
     <DefaultTemplate>
       <OffCanvasContato />
-      <CookieConsent />
+
       <div className={styles.container}>
         <div className={`${styles.header}`}>
           <div className={styles.headerContent}>

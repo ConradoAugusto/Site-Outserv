@@ -49,7 +49,6 @@ import { Form } from "../../../components/Form";
 import ProgressBar from "../../../components/ProgressBar";
 import { PortalVideo } from "../../../components/PortalVideo";
 import { OffCanvasContato } from "../../../components/OffCanvasContato";
-import CookieConsent from "../../../components/CookieModal/CookieConsent";
 import { NumbersCounters } from "../../../components/NumbersCounters";
 import ParallaxComponent from "../../../components/ParallaxComponent";
 import { CarrosselLogos } from "../../../components/CarrosselLogos";
@@ -163,7 +162,6 @@ export const HomePage = () => {
   return (
     <DefaultTemplate className={styles.homePage}>
       <OffCanvasContato />
-      {/* <CookieConsent /> */}
 
       <section id="top" className={`${styles.heroSection}`}>
         <div

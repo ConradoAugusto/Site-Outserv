@@ -1,18 +1,16 @@
-import CookieConsent from "../../../components/CookieModal/CookieConsent";
 import { DefaultTemplate } from "../../../components/DefaultTemplate";
 import { OffCanvasContato } from "../../../components/OffCanvasContato";
 import { Tag } from "../../../components/buttons/Tag";
 import styles from "./style.module.scss";
 
 export const PrivacyPoliciesPage = () => {
-
   const handleLinkClick = (event, id) => {
     event.preventDefault();
-     if (id === "top") {
+    if (id === "top") {
       setTimeout(() => {
         window.scrollTo({
           top: 0,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }, 100);
     } else {
@@ -20,16 +18,14 @@ export const PrivacyPoliciesPage = () => {
       if (targetSection) {
         window.scrollTo({
           top: targetSection.offsetTop - 110,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
-
       }
     }
   };
   return (
     <DefaultTemplate>
-         <OffCanvasContato/>
-         <CookieConsent/>
+      <OffCanvasContato />
       <div className={styles.container}>
         <div className={`${styles.header}`}>
           <div className={styles.headerContent}>
@@ -118,19 +114,39 @@ export const PrivacyPoliciesPage = () => {
             </p>
 
             <div className="paragraph bold d-flex flex-column gap-1 fs-5">
-              <a className="textLight" onClick={(e) => handleLinkClick(e, "item1")} href="#item1" rel="noopener noreferrer">
+              <a
+                className="textLight"
+                onClick={(e) => handleLinkClick(e, "item1")}
+                href="#item1"
+                rel="noopener noreferrer"
+              >
                 1. O que são cookies?
               </a>
 
-              <a className="textLight" onClick={(e) => handleLinkClick(e, "item2")}  href="#item2" rel="noopener noreferrer">
+              <a
+                className="textLight"
+                onClick={(e) => handleLinkClick(e, "item2")}
+                href="#item2"
+                rel="noopener noreferrer"
+              >
                 2. Quais cookies utilizamos?
               </a>
 
-              <a className="textLight" onClick={(e) => handleLinkClick(e, "item3")} href="#item3" rel="noopener noreferrer">
+              <a
+                className="textLight"
+                onClick={(e) => handleLinkClick(e, "item3")}
+                href="#item3"
+                rel="noopener noreferrer"
+              >
                 3. Gerenciamento dos cookies.
               </a>
 
-              <a className="textLight" onClick={(e) => handleLinkClick(e, "item4")} href="#item4" rel="noopener noreferrer">
+              <a
+                className="textLight"
+                onClick={(e) => handleLinkClick(e, "item4")}
+                href="#item4"
+                rel="noopener noreferrer"
+              >
                 4. Atualização da nossa Política.
               </a>
             </div>
