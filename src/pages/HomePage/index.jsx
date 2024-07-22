@@ -142,22 +142,22 @@ export const HomePage = () => {
     },
   };
 
-  const [buttonContent, setButtonContent] = useState('Agendar demonstração');
+  const [buttonContent, setButtonContent] = useState("Agendar demonstração");
 
   const updateContent = () => {
-      if (window.innerWidth < 1044) {
-          setButtonContent('Fale com consultor');
-      } else {
-          setButtonContent('Agendar demonstração');
-      }
+    if (window.innerWidth < 1044) {
+      setButtonContent("Fale com consultor");
+    } else {
+      setButtonContent("Agendar demonstração");
+    }
   };
 
   useEffect(() => {
-      updateContent();
-      window.addEventListener('resize', updateContent);
-      return () => {
-          window.removeEventListener('resize', updateContent);
-      };
+    updateContent();
+    window.addEventListener("resize", updateContent);
+    return () => {
+      window.removeEventListener("resize", updateContent);
+    };
   }, []);
 
   return (
@@ -195,7 +195,6 @@ export const HomePage = () => {
             uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay:100;"
           >
             <div className={styles.iconContainer}>
-    
               <div className={`${styles.tagsIcons}`}>
                 <div>
                   <div
@@ -472,34 +471,6 @@ export const HomePage = () => {
             <div className="accordion  d-flex flex-column-reverse">
               <AccordionItem
                 className={`${styles.btnTitleAccordion} show`}
-                icon={<IconUsersPlus stroke={2} />}
-                onClick={() => {
-                  handleImageChange("admissao");
-                  handleAccordionClick(1);
-                }}
-                isOpen={activeAccordion === 1}
-                key={1}
-                id={"admissao"}
-                header={"Admissão digital descomplicada"}
-                body={
-                  <>
-                    <p>
-                      Modernize suas admissões sem estresse. Diga adeus aos
-                      formulários em papel e dê as boas-vindas a uma entrada
-                      digital intuitiva.
-                    </p>
-                    {activeAccordion === 1 && <ProgressBar />}
-                  </>
-                }
-              />
-              <div className={styles.imgSmall}>
-                <img src={admissao_Sm} alt="" />
-              </div>
-            </div>
-
-            <div className="accordion  d-flex flex-column-reverse">
-              <AccordionItem
-                className={`${styles.btnTitleAccordion} show`}
                 icon={<IconApps stroke={2} />}
                 onClick={() => {
                   handleImageChange("app");
@@ -522,6 +493,34 @@ export const HomePage = () => {
               />
               <div className={styles.imgSmall}>
                 <img src={app_Sm} alt="" />
+              </div>
+            </div>
+
+            <div className="accordion  d-flex flex-column-reverse">
+              <AccordionItem
+                className={`${styles.btnTitleAccordion} show`}
+                icon={<IconUsersPlus stroke={2} />}
+                onClick={() => {
+                  handleImageChange("admissao");
+                  handleAccordionClick(1);
+                }}
+                isOpen={activeAccordion === 1}
+                key={1}
+                id={"admissao"}
+                header={"Admissão digital descomplicada"}
+                body={
+                  <>
+                    <p>
+                      Modernize suas admissões sem estresse. Diga adeus aos
+                      formulários em papel e dê as boas-vindas a uma entrada
+                      digital intuitiva.
+                    </p>
+                    {activeAccordion === 1 && <ProgressBar />}
+                  </>
+                }
+              />
+              <div className={styles.imgSmall}>
+                <img src={admissao_Sm} alt="" />
               </div>
             </div>
 
@@ -652,7 +651,7 @@ export const HomePage = () => {
             >
               <button
                 type="button"
-                className="btn tagDark text-white paragraph bold"
+                className="btn tagDark  text-white paragraph bold"
               >
                 SERVIÇOS
               </button>

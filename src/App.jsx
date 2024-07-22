@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { useEffect, useState } from "react";
 import AnimatedCursor from "react-animated-cursor";
-import Hotjar from "@hotjar/browser";
+
 
 function App() {
   const [isCursorEnabled, setIsCursorEnabled] = useState(
@@ -21,10 +21,6 @@ function App() {
     };
   }, []);
 
-  const siteId = 5062998;
-  const hotjarVersion = 6;
-
-  Hotjar.init(siteId, hotjarVersion);
 
   return (
     <>

@@ -37,7 +37,7 @@ export const AboutPage = () => {
     sansim,
     eptv,
     turbo,
-    eldorado
+    eldorado,
   };
   return (
     <DefaultTemplate>
@@ -204,53 +204,75 @@ export const AboutPage = () => {
                   className="paragraph gray-8 uk-animation-slide-left-medium"
                   data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
                 >
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                  hendrerit nisi sed sollicitudin pellentesque. Nunc posuere
-                  purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl
-                  vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui
-                  et dui fringilla consectetur id nec massa. Aliquam erat
-                  volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt
-                  neque.
+                  Em 2009, era fundada a Outserv, uma empresa ambiciosa, dedicada
+                  a transformar o cenário do Business Process Outsourcing (BPO)
+                  com uma abordagem inovadora. Liderada por uma equipe
+                  visionária, a Outserv começou pequena, mas com grandes
+                  aspirações: incorporar as mais recentes tecnologias para
+                  garantir a qualidade, eficiência e controle dos processos de
+                  negócios de seus clientes.
                 </p>
                 <p
                   className="paragraph gray-8 uk-animation-slide-left-medium"
                   data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 150;"
                 >
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                  hendrerit nisi sed sollicitudin pellentesque. Nunc posuere
-                  purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl
-                  vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui
-                  et dui fringilla consectetur id nec massa. Aliquam erat
-                  volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt
-                  neque.
+                  Nos anos seguintes, a Outserv solidificou sua reputação como
+                  líder em BPO, utilizando a plataforma tecnológica TOTVS RM.
+                  Essa ferramenta não apenas facilitou a gestão e automação dos
+                  processos de negócios, mas também assegurou a eficácia
+                  operacional que os clientes tanto valorizavam. A equipe da
+                  Outserv expandiu-se, atraindo talentos do setor que eram tanto
+                  especializados quanto comprometidos com a visão da empresa.
+                </p>
+                <p
+                  className="paragraph gray-8 uk-animation-slide-left-medium"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 200;"
+                >
+                  Em um movimento estratégico, a Outserv associou-se à
+                  LogiThink, uma empresa renomada especializada na gestão de
+                  Protheus RM* e pioneira em RPA (Robotic Process Automation),
+                  conhecida como FLUING. Esta parceria foi celebrada com grande
+                  otimismo de ambos os lados, representando uma fusão
+                  complementar de expertise e tecnologia.
                 </p>
               </div>
 
               <div className={styles.paragraph}>
                 <p
                   className="paragraph gray-8 uk-animation-slide-left-medium"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 200;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 250;"
                 >
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                  hendrerit nisi sed sollicitudin pellentesque. Nunc posuere
-                  purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl
-                  vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui
-                  et dui fringilla consectetur id nec massa. Aliquam erat
-                  volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt
-                  neque.{" "}
+                  Com a parceria consolidada, a Outserv não apenas ampliou seu
+                  portfólio de serviços, mas também se reposicionou no mercado
+                  como uma integradora de soluções tecnológicas. Este novo
+                  posicionamento permitiu à empresa atender a uma gama ainda
+                  maior de necessidades dos clientes, oferecendo soluções mais
+                  completas e integradas que abrangiam desde o BPO tradicional
+                  até soluções avançadas de automação e gestão de processos.
                 </p>
 
                 <p
                   className="paragraph gray-8 uk-animation-slide-left-medium"
                   data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 250;"
                 >
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                  hendrerit nisi sed sollicitudin pellentesque. Nunc posuere
-                  purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl
-                  vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui
-                  et dui fringilla consectetur id nec massa. Aliquam erat
-                  volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt
-                  neque.
+                  Olhando para o futuro, a Outserv está posicionada não apenas
+                  como uma líder em seu setor, mas como uma pioneira na
+                  integração de tecnologia e serviços de gestão. Com planos de
+                  expandir ainda mais seu alcance global e continuar inovando em
+                  suas ofertas, a empresa segue comprometida com a excelência,
+                  inovação e, acima de tudo, com o sucesso de seus clientes.
+                </p>
+
+                <p
+                  className="paragraph gray-8 uk-animation-slide-left-medium"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 250;"
+                >
+                  A jornada da Outserv é um testemunho do poder da inovação,
+                  especialização e parcerias estratégicas. Desde sua fundação em
+                  2009 até se tornar uma integradora de soluções líder no
+                  mercado, a Outserv exemplifica como visão, dedicação e a
+                  capacidade de se adaptar às mudanças do mercado são essenciais
+                  para o sucesso contínuo.
                 </p>
               </div>
             </div>
@@ -531,7 +553,7 @@ export const AboutPage = () => {
           </div>
         </div>
       </section>
-      <CommentCarousel/>
+      <CommentCarousel />
       <br />
       <div className={styles.form}>
         <Form />
