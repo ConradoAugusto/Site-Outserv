@@ -4,24 +4,25 @@ import "slick-carousel/slick/slick-theme.css";
 import { CompanyComment } from "../CompanyComment";
 import styles from "./style.module.scss";
 import { Tag } from "../buttons/Tag";
-import madero from "../../src/assets/logos/madero.webp";
+import Fabio from "../../src/assets/comments/Fabio.jpg";
+import Guilherme from "../../src/assets/comments/Guilherme.jpg";
 import { IconChevronLeft,IconChevronRight } from '@tabler/icons-react';
 
 
 const comments = [
   {
-    image: "https://amanha.com.br/images/u/171/Junior-Durski_fundador-da-Rede-Madero.jpg",
+    image: Fabio,
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolores similique eius inventore expedita tenetur. Ea blanditiis, aut laudantium tenetur, magni voluptatibus qui voluptas, eos at incidunt eaque! Molestiae, laudantium!",
-    cliente: "Madero",
-    cargo: "CEO - Madero",
+      "“Nós da Smiths Brasil – Divisão John Crane, somos clientes da OUTSERV e estamos extremamente satisfeitos com o serviço outsourced de folha de pagamento prestados. A parceria, confiança no trabalho, profissionalismo e acima de tudo a dedicação que eles têm para conosco, é fator chave para termos essa aliança que dura mais de uma década e que temos a certeza de que se estenderá ainda por muitos anos. ”",
+    cliente: "Fábio Rogério Fornaro",
+    cargo: "Gerente Generalista de Recursos Humanos - John Crane",
   },
   {
-    image: "https://touc.com.br/assets/img/cta.png",
+    image: Guilherme,
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolores similique eius inventore expedita tenetur. Ea blanditiis, aut laudantium tenetur, magni voluptatibus qui voluptas, eos at incidunt eaque! Molestiae, laudantium!",
-    cliente: "Pedro Afonso",
-    cargo: "CEO - TOUC",
+      "“Sobre a Outserv foi uma excelente  escolha em firmar  essa parceria, sempre nos atendendo com rapidez e comprometimento, buscando sempre as melhores soluções nos processos, destaque para a versatilidade dos consultores, estamos bem satisfeitos com o excelente trabalho desses profissionais!”",
+    cliente: "Guilherme Rodrigues Belini",
+    cargo: "Gerente de  RH - Indusparquet",
   },
 ];
 
@@ -29,7 +30,7 @@ const CommentCarousel = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,

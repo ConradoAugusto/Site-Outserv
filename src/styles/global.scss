@@ -562,3 +562,38 @@ button:focus:not(:focus-visible) {
   height: 0 !important;
   visibility: hidden !important;
 }
+
+// _________ Styles Checkbox __________
+
+.checkBox {
+  input[type="checkbox"] {
+    border-radius: 255px !important;
+    border: transparent !important;
+
+    &:checked {
+      background-color: var(--colorPrimary) !important;
+    }
+
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+  }
+
+
+.cookies {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: fixed !important;
+  bottom: 20px !important;
+  left: 20px !important;
+  z-index: 99999 !important;
+  cursor: pointer !important;
+;
+  
+   svg {
+    color: var(--colorPrimary);
+   }
+
+}

@@ -4,12 +4,17 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { useEffect, useState } from "react";
 import AnimatedCursor from "react-animated-cursor";
 import { Cookies } from "../components/ModalCookies/Cookies";
+import { IconCookie } from '@tabler/icons-react';
 
 
-function App() {
+function App({}) {
   const [isCursorEnabled, setIsCursorEnabled] = useState(
     window.innerWidth >= 1000
   );
+  const [showCookieIcon, setShowCookieIcon] = useState(false);
+
+  const [showModal, setShowModal] = useState(false);
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,10 +27,19 @@ function App() {
     };
   }, []);
 
+  const openCostumer = () => {
+    setShowModal(true);
+  };
+
 
   return (
     <>
-      <RoutesMain />
+     {showCookieIcon && (
+        <div onClick={() => openCostumer()} className="cookies levitate">
+          <IconCookie stroke={2} size={50} />
+        </div>
+         )}
+    <RoutesMain />
       {isCursorEnabled && (
         <AnimatedCursor
           innerSize={8}
@@ -49,7 +63,7 @@ function App() {
           }}
         />
       )}
-      <Cookies/>
+      <Cookies setShowModal={setShowModal} showModal={showModal} setShowCookieIcon={setShowCookieIcon}/>
     </>
   );
 }

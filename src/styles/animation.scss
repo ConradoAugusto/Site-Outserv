@@ -18,6 +18,46 @@
   animation: levitation 4s ease-in-out infinite;
 }
 
+@keyframes cookies {
+  0% {
+    transform: translate(0);
+  }
+  10% {
+    transform: translate(2px, -2px);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, 2px);
+  }
+  50% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-2px, 2px);
+  }
+
+  80% {
+    transform: translate(-2px, 2px);
+  }
+  90% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+//   aplicar delay a cada elemento
+
+//  style={{animationDelay:"5s"}}
+
+.levitate {
+  animation: cookies 2s linear 30s infinite;
+}
+
+
 //   ____________________________________________________________
 
 @keyframes cosmosRight {

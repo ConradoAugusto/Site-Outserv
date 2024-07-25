@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { ModalCookies } from '../index';
-import { Button, Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import styles from "./style.module.scss";
 
-export const Cookies = () => {
-  const [showModal, setShowModal] = useState(false);
+export const Cookies = ({ setShowCookieIcon, setShowModal, showModal }) => {
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
@@ -15,21 +15,19 @@ export const Cookies = () => {
 
   const handleAcceptAll = () => {
     localStorage.setItem('userConsent', 'accepted');
-    console.log('Aceitar todos os cookies');
     setShowBanner(false);
     setShowModal(false);
   };
 
   const handleRejectAll = () => {
     localStorage.setItem('userConsent', 'rejected');
-    console.log('Rejeitar todos os cookies');
     setShowBanner(false);
     setShowModal(false);
   };
 
   const handleSavePreferences = (preferences) => {
+    console.log(preferences);
     localStorage.setItem('userConsent', JSON.stringify(preferences));
-    console.log('Salvar preferências de cookies', preferences);
     setShowModal(false);
     setShowBanner(false);
   };
@@ -40,18 +38,19 @@ export const Cookies = () => {
 
   const handleCustomize = () => {
     setShowModal(true);
+    setShowBanner(false);
   };
 
   return (
     <div >
       {showBanner && (
-        <div className="cookie-banner" style={{zIndex: '999999', position: 'fixed', bottom: 0, left: 0, width: '100%', backgroundColor: '#f8f9fa', padding: '10px', boxShadow: '0px 0px 5px rgba(0,0,0,0.1)' }}>
+        <div style={{zIndex: '999999', position: 'fixed', bottom: 0, left: 0, width: '100%', backgroundColor: '#f8f9fa', padding: '10px', boxShadow: '0px 0px 5px rgba(0,0,0,0.1)' }}>
           <Container>
-            <Row>
-              <Col md={8}>
+            <div className={`${styles.cookieBanner} d-flex gap-3`}>
+              <div className="w-70">
                 <p>Usamos cookies para melhorar sua experiência. Você pode aceitar todos os cookies, rejeitá-los ou personalizar suas preferências.</p>
-              </Col>
-              <Col md={4} className="d-flex justify-content-end">
+              </div>
+              <div  className={`${styles.divButton} d-flex justify-content-center`}>
                 <a  onClick={handleRejectAll} className=" btn outline me-2">
                   Rejeitar
                 </a>
@@ -61,8 +60,8 @@ export const Cookies = () => {
                 <a className="btn faleconosco"  onClick={handleCustomize}>
                   Personalizar
                 </a>
-              </Col>
-            </Row>
+              </div>
+            </div>
           </Container>
         </div>
       )}
@@ -72,6 +71,7 @@ export const Cookies = () => {
         onAcceptAll={handleAcceptAll}
         onRejectAll={handleRejectAll}
         onSavePreferences={handleSavePreferences}
+        setShowCookieIcon={setShowCookieIcon}
       />
     </div>
   );

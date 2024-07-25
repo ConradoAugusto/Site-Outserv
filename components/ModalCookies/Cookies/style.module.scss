@@ -1,0 +1,11 @@
+.cookieBanner {
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+
+  .divButton {
+    @media (max-width: 900px) {
+      justify-content: end !important;
+    }
+  }
+}
