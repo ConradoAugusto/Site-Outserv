@@ -34,11 +34,11 @@ function App({}) {
 
   return (
     <>
-     {showCookieIcon && (
+     {/* {showCookieIcon && (
         <div onClick={() => openCostumer()} className="cookies levitate">
           <IconCookie stroke={2} size={50} />
         </div>
-         )}
+         )} */}
     <RoutesMain />
       {isCursorEnabled && (
         <AnimatedCursor
@@ -63,7 +63,7 @@ function App({}) {
           }}
         />
       )}
-      <Cookies setShowModal={setShowModal} showModal={showModal} setShowCookieIcon={setShowCookieIcon}/>
+      {/* <Cookies setShowModal={setShowModal} showModal={showModal} setShowCookieIcon={setShowCookieIcon}/> */}
     </>
   );
 }
