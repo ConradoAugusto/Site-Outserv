@@ -104,19 +104,19 @@ export const Footer = () => {
             <div className={styles.itemTwo}>
               <span className="paragraph bold gray-8">Recurso</span>
               <Link
-                onClick={(e) => handleLinkClick(e, "recursos")}
+                onClick={(e) => handleLinkClick(e, "servicos")}
                 className="paragraph semiBold gray-8"
               >
                 Consultoria Totvs
               </Link>
               <Link
-                onClick={(e) => handleLinkClick(e, "recursos")}
+                onClick={(e) => handleLinkClick(e, "servicos")}
                 className="paragraph semiBold gray-8"
               >
                 BPO
               </Link>
               <Link
-                onClick={(e) => handleLinkClick(e, "recursos")}
+                onClick={(e) => handleLinkClick(e, "servicos")}
                 className="paragraph semiBold gray-8"
               >
                 Body Shop
