@@ -58,21 +58,6 @@ export const LinkTree = () => {
                 </div>
               </Link>
             </div>
-
-            <div className={styles.cardItem}>
-              <Link
-                to={
-                  "https://api.whatsapp.com/send?phone=5519996844020&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os."
-                }
-              >
-                <img src={Rafael} alt="" />
-
-                <div className={styles.cardContent}>
-                  <IconBrandWhatsapp stroke={2} />
-                  <h3>Rafael Brito</h3>
-                </div>
-              </Link>
-            </div>
           </div>
           <div className={styles.redesSociais}>
             <a

@@ -12,8 +12,12 @@ import { IconChevronLeft,IconChevronRight } from '@tabler/icons-react';
 const comments = [
   {
     image: Fabio,
-    content:
-      "“Nós da Smiths Brasil – Divisão John Crane, somos clientes da OUTSERV e estamos extremamente satisfeitos com o serviço outsourced de folha de pagamento prestados. A parceria, confiança no trabalho, profissionalismo e acima de tudo a dedicação que eles têm para conosco, é fator chave para termos essa aliança que dura mais de uma década e que temos a certeza de que se estenderá ainda por muitos anos. ”",
+    content: `
+    <strong>Parceria com confiança e dedicação</strong>
+    Contratamos o serviço de outsourced de folha de pagamentos da OutServ e estamos extremamente satisfeitos. A parceria tem sido marcada por confiança, profissionalismo e, acima de tudo, pela dedicação.
+    Esses fatores são decisivos para essa aliança, que já dura mais de uma década e que temos a certeza de que se estenderá ainda por muitos anos.
+    A precisão e a eficiência na gestão da folha de pagamentos garantem que todos os processos sejam realizados de maneira impecável e dentro dos prazos estabelecidos. Isso nos proporciona uma tranquilidade porque sabemos que podemos contar com uma equipe dedicada.
+      `,
     cliente: "Fábio Rogério Fornaro",
     cargo: "Gerente Generalista de Recursos Humanos - John Crane",
   },

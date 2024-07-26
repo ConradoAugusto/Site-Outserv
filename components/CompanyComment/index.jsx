@@ -11,7 +11,7 @@ export const CompanyComment = ({ image, content, cliente, cargo }) => {
           />
         </div>
         <div className={`${styles.textComments} d-flex flex-column justify-content-between`}>
-          <p className="paragraph demoimentos">{content}</p>
+          <p className="paragraph gap-2 d-flex flex-column" dangerouslySetInnerHTML={{ __html: content }}></p>
           <div className="d-flex justify-content-between">
             <div>
               <h4 className="paragraph bold mb-0" style={{ lineHeight: 2 }}>{cliente}</h4>
