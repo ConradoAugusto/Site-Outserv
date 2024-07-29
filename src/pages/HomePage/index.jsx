@@ -17,8 +17,7 @@ import {
   IconShieldHalf,
 } from "@tabler/icons-react";
 
-import Ellipse from "../../assets/Ellipse.png";
-import hero from "../../assets/hero.jpg";
+import Ellipse from "../../assets/Ellipse.webp";
 import PortalLight_Bcg from "../../assets/PortalImg/theme/portalLight.png";
 import portalLight_element from "../../assets/PortalImg/theme/portalLight_element.png";
 import PortalDark_Bcg from "../../assets/PortalImg/theme/portalDark.png";

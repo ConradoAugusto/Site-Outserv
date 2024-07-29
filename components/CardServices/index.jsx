@@ -1,9 +1,6 @@
 import styles from "./style.module.scss";
 
 export const CardServices = ({ children, title, text, slogan, data}) => {
-  const whatsapp =
-    "https://api.whatsapp.com/send?phone=5519996844020&text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços.";
-
   return (
     <div className={`${styles.container } uk-animation-slide-left-medium`}
     data-uk-scrollspy={`${data} cls: uk-animation-slide-left-medium; repeat: true; `}

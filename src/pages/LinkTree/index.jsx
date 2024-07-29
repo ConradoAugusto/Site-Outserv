@@ -8,7 +8,6 @@ import styles from "./style.module.scss";
 import logo from "../../assets/logoOutserv1.webp";
 import Gustavo from "../../assets/LinkTree/Gustavo.webp";
 import Joao from "../../assets/LinkTree/Joao.webp";
-import Rafael from "../../assets/LinkTree/Rafael.webp";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 

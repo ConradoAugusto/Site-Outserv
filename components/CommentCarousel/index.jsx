@@ -4,8 +4,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { CompanyComment } from "../CompanyComment";
 import styles from "./style.module.scss";
 import { Tag } from "../buttons/Tag";
-import Fabio from "../../src/assets/comments/Fabio.jpg";
-import Guilherme from "../../src/assets/comments/Guilherme.jpg";
+import Fabio from "../../src/assets/comments/Fabio.webp";
+import Guilherme from "../../src/assets/comments/Guilherme.webp";
 import { IconChevronLeft,IconChevronRight } from '@tabler/icons-react';
 
 
