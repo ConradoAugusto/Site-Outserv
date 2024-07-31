@@ -687,7 +687,7 @@ export const HomePage = () => {
 
             <CardServices
               data={"delay: 70;"}
-              title="BPO EM RH"
+              title="FOLHA DE PAGAMENTO"
               text="Foco nos negócios"
               slogan="Cuidamos da sua operação administrativa e financeira"
             >

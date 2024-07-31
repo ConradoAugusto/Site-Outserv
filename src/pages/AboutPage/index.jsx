@@ -280,7 +280,7 @@ export const AboutPage = () => {
         </div>
       </section>
 
-      <section className={styles.sectionArrows}>
+      {/* <section className={styles.sectionArrows}>
         <div className="container">
           <div className={styles.arrowsContaint}>
             <div>
@@ -369,7 +369,7 @@ export const AboutPage = () => {
                 <iframe
                   className={styles.iframeMovie}
                   src="https://www.youtube.com/embed/RAB1igra1s4"
-                  title="Vídeo Institucional OutServ"
+                  title="Vídeo Institucional Outserv"
                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 ></iframe>
               </div>
@@ -454,7 +454,7 @@ export const AboutPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className={styles.sectionMission}>
         <div className="container">

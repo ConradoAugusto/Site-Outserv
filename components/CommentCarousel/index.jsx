@@ -6,15 +6,14 @@ import styles from "./style.module.scss";
 import { Tag } from "../buttons/Tag";
 import Fabio from "../../src/assets/comments/Fabio.webp";
 import Guilherme from "../../src/assets/comments/Guilherme.webp";
-import { IconChevronLeft,IconChevronRight } from '@tabler/icons-react';
-
+import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 
 const comments = [
   {
     image: Fabio,
     content: `
     <strong>Parceria com confiança e dedicação</strong>
-    Contratamos o serviço de outsourced de folha de pagamentos da OutServ e estamos extremamente satisfeitos. A parceria tem sido marcada por confiança, profissionalismo e, acima de tudo, pela dedicação.
+    Contratamos o serviço de outsourced de folha de pagamentos da Outserv e estamos extremamente satisfeitos. A parceria tem sido marcada por confiança, profissionalismo e, acima de tudo, pela dedicação.
     Esses fatores são decisivos para essa aliança, que já dura mais de uma década e que temos a certeza de que se estenderá ainda por muitos anos.
     A precisão e a eficiência na gestão da folha de pagamentos garantem que todos os processos sejam realizados de maneira impecável e dentro dos prazos estabelecidos. Isso nos proporciona uma tranquilidade porque sabemos que podemos contar com uma equipe dedicada.
       `,
@@ -23,10 +22,13 @@ const comments = [
   },
   {
     image: Guilherme,
-    content:
-      "“Sobre a Outserv foi uma excelente  escolha em firmar  essa parceria, sempre nos atendendo com rapidez e comprometimento, buscando sempre as melhores soluções nos processos, destaque para a versatilidade dos consultores, estamos bem satisfeitos com o excelente trabalho desses profissionais!”",
+    content: `
+    <strong>Atendimento ágil e comprometimento</strong>
+    Firmar a parceria com a Outserv foi uma excelente escolha para o Grupo Indusparquet. Desde o início, fomos atendidos com rapidez e comprometimento, características que se destacam em todos os serviços prestados pela consultoria. A Outserv nos apresenta as melhores soluções para os nossos processos, o que tem sido fundamental para a nossa operação.
+    Um dos pontos que mais nos impressiona é a versatilidade dos consultores da Outserv. Eles demonstram uma capacidade notável de adaptação e inovação, sempre prontos para enfrentar novos desafios e encontrar as soluções mais adequadas para as nossas necessidades específicas.
+      `,
     cliente: "Guilherme Rodrigues Belini",
-    cargo: "Gerente de  RH - Indusparquet",
+    cargo: "Gerente de Recursos Humanos - Grupo Indusparquet",
   },
 ];
 
@@ -74,7 +76,7 @@ const SampleNextArrow = (props) => {
       className={`${className} ${styles.arrow} ${styles.nextArrow}`}
       onClick={onClick}
     >
-       <IconChevronRight size="34" stroke={2} color={"#118a6b"} />
+      <IconChevronRight size="34" stroke={2} color={"#118a6b"} />
     </div>
   );
 };
@@ -86,10 +88,9 @@ const SamplePrevArrow = (props) => {
       className={`${className} ${styles.arrow} ${styles.prevArrow}`}
       onClick={onClick}
     >
-     <IconChevronLeft size="34" stroke={2} color={"#118a6b"} />
+      <IconChevronLeft size="34" stroke={2} color={"#118a6b"} />
     </div>
   );
 };
-
 
 export default CommentCarousel;

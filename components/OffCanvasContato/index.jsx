@@ -29,6 +29,19 @@ export const OffCanvasContato = () => {
         <div className={`${styles.offcanvasBody} offcanvas-body`}>
           <div className={styles.contato}>
             <h2 className="paragraph acordion primary">Contatos</h2>
+            <p className="bold">Americana - SP</p>
+            <p className="secondary">
+              <IconMapPin stroke={2} size={20} className="primary" />{" "}
+              
+              <a
+                href="https://maps.app.goo.gl/SoV1rnJUeLeVP9Co7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+               Rua 4, nº 1544 . Piso Superior - Centro
+              </a>
+            </p>
+            <p className="bold">Rio Claro - SP</p>
             <p className="secondary">
               <IconMapPin stroke={2} size={20} className="primary" />{" "}
               <a
@@ -37,7 +50,6 @@ export const OffCanvasContato = () => {
                 rel="noopener noreferrer"
               >
                 Rua Honduras, 185 – 11 Andar | Centro Empresarial Av. Office -
-                Americana | SP
               </a>
             </p>
             <p className="secondary">

@@ -35,12 +35,16 @@
   }
   
   .offcanvasBody {
-    padding: 40px !important;
+    padding: 0px 40px !important;
     z-index: 2 !important;
 
   
     h2 {
       color: var(--colorTextPrimary) !important;
+    }
+
+    p {
+      margin-bottom: 0px !important;
     }
   
     a {

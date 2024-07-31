@@ -113,11 +113,7 @@ const ParallaxComponent = ({ currentTheme, themeMap, handleThemeChange }) => {
           </div>
           <div className="d-flex justify-content-center">
             <p className="paragraph text-center">
-              Somos especialistas em RH-DP atuação Território Nacional focado na
-              Terceirização folha de pagamento – utilizando o
-              <span className="primary"> TOTVS RM Labore</span>, Ponto, E-Social
-              e Portal Web, implantação e manutenção TOTVS (RM), Auditoria
-              Trabalhista e Benefícios.
+            Consultoria TOTVS RM, Portal RH, BPO de folha de pagamento, body shop e mais.
             </p>
           </div>
         </div>
