@@ -38,18 +38,18 @@ export const OffCanvasContato = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-               Rua 4, nº 1544 . Piso Superior - Centro
+              Rua Honduras, 185 – 11 Andar | Centro Empresarial Av. Office - Santo Antonio
               </a>
             </p>
             <p className="bold">Rio Claro - SP</p>
             <p className="secondary">
               <IconMapPin stroke={2} size={20} className="primary" />{" "}
               <a
-                href="https://maps.app.goo.gl/SoV1rnJUeLeVP9Co7"
+                href="https://maps.app.goo.gl/ZnBmtQgJrW1ctjrM9"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Rua Honduras, 185 – 11 Andar | Centro Empresarial Av. Office -
+                Rua Quatro, 1544 - Piso Superior - Centro
               </a>
             </p>
             <p className="secondary">
