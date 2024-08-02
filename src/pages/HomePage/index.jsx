@@ -158,6 +158,9 @@ export const HomePage = () => {
     };
   }, []);
 
+    const contatoRef = useRef(null);
+  
+
   return (
     <DefaultTemplate className={styles.homePage}>
       <OffCanvasContato />
@@ -871,7 +874,7 @@ export const HomePage = () => {
         </div>
       </section>
 
-      <section className={styles.sectionForms}>
+      <section ref={contatoRef} id="contato"  className={styles.sectionForms}>
         <Form />
       </section>
     </DefaultTemplate>

@@ -21,6 +21,7 @@ import sansim from "../../src/assets/logos/sansim.webp";
 import sigma from "../../src/assets/logos/sigma.webp";
 import turbo from "../../src/assets/logos/turbo.webp";
 import madero from "../../src/assets/logos/madero.webp";
+import omega from "../../src/assets/logos/omega.webp";
 
 import { useEffect, useRef } from "react";
 import styles from "./style.module.scss";
@@ -32,6 +33,7 @@ export const CarrosselLogos = () => {
     ccr,
     cipatex,
     contenco,
+    omega,
     covabra,
     eldorado,
     eletromei,
