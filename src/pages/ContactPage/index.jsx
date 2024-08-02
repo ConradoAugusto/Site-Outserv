@@ -157,8 +157,7 @@ export const ContactPage = () => {
                 className="paragraph whiteColor w-100 uk-scrollspy-inview uk-animation-slide-left-medium"
                 data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 300;"
               >
-                Procurando por uma
-                <span>solução completa em RH e software</span>? Com a Outserv,
+                Procurando por uma<span> solução completa em RH e software</span>? Com a Outserv,
                 transforme desafios em oportunidades. Nossa expertise em
                 consultoria Totvs e tecnologia de ponta atende clientes em todo
                 o Brasil. Vamos conversar.

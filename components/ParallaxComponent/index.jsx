@@ -50,7 +50,6 @@ const ParallaxComponent = ({ currentTheme, themeMap, handleThemeChange }) => {
     >
       <div className={`${styles.portalTheme} container`}>
         <div id="parallaxContainer" className="hero-animation-img">
-          <a href="#">
             <div
               ref={parallaxBackgroundRef}
               id="heroAnimationImg"
@@ -81,7 +80,7 @@ const ParallaxComponent = ({ currentTheme, themeMap, handleThemeChange }) => {
                 </div>
               ))}
             </div>
-          </a>
+
         </div>
         <div className={`${styles.themeBtn}`}>
           <a

@@ -142,7 +142,7 @@ export const Form = () => {
               Vamos <span>começar?</span>
             </h2>
             <p className="paragraph whiteColor mb-5">
-              Procurando por uma <span>solução completa em RH e software</span>?
+              Procurando por uma <span> solução completa em RH e software</span>?
               Com a Outserv, transforme desafios em oportunidades. Nossa
               expertise em consultoria Totvs e tecnologia de ponta atende
               clientes em todo o Brasil. Vamos conversar.
