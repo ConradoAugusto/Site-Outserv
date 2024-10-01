@@ -1,4 +1,3 @@
-
 import { DefaultTemplate } from "../../../components/DefaultTemplate";
 import { OffCanvasContato } from "../../../components/OffCanvasContato";
 import { Tag } from "../../../components/buttons/Tag";

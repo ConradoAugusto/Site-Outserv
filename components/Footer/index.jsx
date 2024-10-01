@@ -14,7 +14,7 @@ export const Footer = () => {
   const handleLinkClick = (event, id) => {
     event.preventDefault();
     if (pathname !== "/") {
-      navigate("/"); 
+      navigate("/");
     }
 
     setTimeout(() => {
@@ -22,7 +22,7 @@ export const Footer = () => {
       if (targetSection) {
         window.scrollTo({
           top: targetSection.offsetTop - 20,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     }, 100);
@@ -40,7 +40,7 @@ export const Footer = () => {
     <section className={styles.footer}>
       <div
         className={`${styles.container} container form-group col-md-12 uk-animation-slide-left-medium`}
-        data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 400;"
+        data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 400;"
       >
         <div className={styles.content}>
           <div className={styles.infos}>
@@ -60,12 +60,11 @@ export const Footer = () => {
                   target="_blank"
                   aria-label="Whatsapp"
                 >
-                  <IconBrandWhatsapp stroke={2}  color="#82848e" />
+                  <IconBrandWhatsapp stroke={2} color="#82848e" />
                 </Link>
               </div>
               <div className={styles.redesSociais}>
                 <a
-                
                   href="https://www.linkedin.com/company/outserv/mycompany/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -79,7 +78,7 @@ export const Footer = () => {
                   rel="noopener noreferrer"
                   aria-label="Instagram"
                 >
-                  <IconBrandInstagram stroke={2}  color="#82848e" />
+                  <IconBrandInstagram stroke={2} color="#82848e" />
                 </a>
               </div>
             </div>
@@ -144,7 +143,9 @@ export const Footer = () => {
             Protheus, RM e TOTVS são uma propriedade da TOTVS S/A
           </p>
           <div className={styles.contentCopyrigh}>
-            <Link to={"/legal/termos-e-condicoes"} className="gray-8">Termos e condições</Link>
+            <Link to={"/legal/termos-e-condicoes"} className="gray-8">
+              Termos e condições
+            </Link>
             <Link to={"/legal/politicas-de-privacidade"} className="gray-8">
               Politica de privacidade
             </Link>

@@ -1,0 +1,20 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--colorWhite);
+  }
+}
+
+.Content {
+  display: flex !important;
+  background: var(--colorWhite) !important;
+  height: 500px !important;
+  width: 100% !important;
+  border-radius: 8px !important;
+}

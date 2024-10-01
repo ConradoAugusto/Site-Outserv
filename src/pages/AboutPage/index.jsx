@@ -46,7 +46,7 @@ export const AboutPage = () => {
         <div className={`${styles.heroContainer} container  d-flex flex-row`}>
           <div
             className={`${styles.heroText} uk-scrollspy-inview uk-animation-slide-left-medium`}
-            uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay:200;"
+            uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay:200;"
           >
             <h1 className="title two mb-4">
               Sobre <span className="textLight">nós</span>
@@ -69,11 +69,11 @@ export const AboutPage = () => {
           </div>
           <div
             className={`${styles.iconContainer} uk-scrollspy-inview uk-animation-slide-left-medium`}
-            uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay:200;"
+            uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay:200;"
           >
             <div
               className={`${styles.heroImage} uk-scrollspy-inview uk-animation-slide-right-medium`}
-              uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay:500;"
+              uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: false; delay:500;"
             >
               <div className={styles.iconDiv}>
                 <img className={styles.mascote} src={animationMascote} alt="" />
@@ -137,14 +137,14 @@ export const AboutPage = () => {
             <div>
               <h2
                 className="title one uk-animation-slide-left-medium"
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
+                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 50;"
               >
                 Nossos <span className="textLight">números</span>
               </h2>
             </div>
             <div
               className="uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
+              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 100;"
             >
               <p className="paragraph text-center">
                 Presente em todo o Brasil, a Outserv oferece soluções de RH e
@@ -192,7 +192,7 @@ export const AboutPage = () => {
           <div className={styles.divParagraph}>
             <div
               className="uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
+              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 50;"
             >
               <h2 className="title one secondary">
                 Nossa <span className="textLight">história</span>
@@ -202,7 +202,7 @@ export const AboutPage = () => {
               <div className={styles.paragraph}>
                 <p
                   className="paragraph gray-8 uk-animation-slide-left-medium"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 100;"
                 >
                   Em 2009, era fundada a Outserv, uma empresa ambiciosa, dedicada
                   a transformar o cenário do Business Process Outsourcing (BPO)
@@ -214,7 +214,7 @@ export const AboutPage = () => {
                 </p>
                 <p
                   className="paragraph gray-8 uk-animation-slide-left-medium"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 150;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 150;"
                 >
                   Nos anos seguintes, a Outserv solidificou sua reputação como
                   líder em BPO, utilizando a plataforma tecnológica TOTVS RM.
@@ -226,7 +226,7 @@ export const AboutPage = () => {
                 </p>
                 <p
                   className="paragraph gray-8 uk-animation-slide-left-medium"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 200;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 200;"
                 >
                   Em um movimento estratégico, a Outserv associou-se à
                   LogiThink, uma empresa renomada especializada na gestão de
@@ -240,7 +240,7 @@ export const AboutPage = () => {
               <div className={styles.paragraph}>
                 <p
                   className="paragraph gray-8 uk-animation-slide-left-medium"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 250;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 250;"
                 >
                   Com a parceria consolidada, a Outserv não apenas ampliou seu
                   portfólio de serviços, mas também se reposicionou no mercado
@@ -253,7 +253,7 @@ export const AboutPage = () => {
 
                 <p
                   className="paragraph gray-8 uk-animation-slide-left-medium"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 250;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 250;"
                 >
                   Olhando para o futuro, a Outserv está posicionada não apenas
                   como uma líder em seu setor, mas como uma pioneira na
@@ -265,7 +265,7 @@ export const AboutPage = () => {
 
                 <p
                   className="paragraph gray-8 uk-animation-slide-left-medium"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 250;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 250;"
                 >
                   A jornada da Outserv é um testemunho do poder da inovação,
                   especialização e parcerias estratégicas. Desde sua fundação em
@@ -286,7 +286,7 @@ export const AboutPage = () => {
             <div>
               <div
                 className={`${styles.arrowsTop} d-flex inverted uk-animation-slide-right-medium"`}
-                data-uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay: 50;"
+                data-uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: false; delay: 50;"
               >
                 <svg
                   className="bgArrowSecondary"
@@ -364,7 +364,7 @@ export const AboutPage = () => {
               </div>
               <div
                 className={`${styles.movie} uk-animation-slide-bottom-medium"`}
-                data-uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true; delay: 50;"
+                data-uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: false; delay: 50;"
               >
                 <iframe
                   className={styles.iframeMovie}
@@ -375,7 +375,7 @@ export const AboutPage = () => {
               </div>
               <div
                 className={`${styles.arrowsBottom} d-flex uk-animation-slide-left-medium"`}
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
+                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 100;"
               >
                 <svg
                   className="bgArrowSecondary"
@@ -463,7 +463,7 @@ export const AboutPage = () => {
               <div className={styles.textBussiness}>
                 <h4
                   className="uk-animation-slide-left-medium title sobre gray-8"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 50;"
                 >
                   “Nosso compromisso é com a
                   <span className="textLight">
@@ -473,7 +473,7 @@ export const AboutPage = () => {
                 </h4>
                 <p
                   className="uk-animation-slide-left-medium paragraph textHeroAbout gray-8"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 100;"
                 >
                   Acreditamos que o avanço da nossa empresa está intrinsecamente
                   ligado ao desenvolvimento contínuo de nossos colaboradores,
@@ -483,7 +483,7 @@ export const AboutPage = () => {
               <div className={styles.textMission}>
                 <p
                   className="uk-animation-slide-left-medium paragraph textHeroAbout gray-8"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 150;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 150;"
                 >
                   Nossa <strong>missão</strong> é criar tecnologias inovadoras
                   que potencializem o sucesso e crescimento de nosso clientes,
@@ -496,7 +496,7 @@ export const AboutPage = () => {
 
                 <p
                   className="uk-animation-slide-left-medium paragraph textHeroAbout gray-8"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 200;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 200;"
                 >
                   Ser <strong>reconhecida como inovadora no setor</strong> de
                   tecnologia,BPO impulsionando o progresso e transformando
@@ -508,7 +508,7 @@ export const AboutPage = () => {
 
                 <p
                   className="uk-animation-slide-left-medium paragraph textHeroAbout gray-8"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 250;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 250;"
                 >
                   <strong>
                     Pautamos nossa ações na transparência, ética e
@@ -523,7 +523,7 @@ export const AboutPage = () => {
             <div className={styles.commitment}>
               <div
                 className={`${styles.imgHeader} uk-animation-slide-left-medium"`}
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 300;"
+                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 300;"
               >
                 <img
                   className={styles.smallerAndGraeter}
@@ -539,7 +539,7 @@ export const AboutPage = () => {
                   {Object.keys(carrosselMap).map((key, index) => (
                     <img
                       className="uk-animation-slide-bottom-medium"
-                      data-uk-scrollspy={`cls: uk-animation-slide-bottom-medium; repeat: true; delay: ${
+                      data-uk-scrollspy={`cls: uk-animation-slide-bottom-medium; repeat: false; delay: ${
                         50 * (index + 1)
                       };`}
                       key={key}

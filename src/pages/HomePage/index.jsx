@@ -52,6 +52,7 @@ import { NumbersCounters } from "../../../components/NumbersCounters";
 import ParallaxComponent from "../../../components/ParallaxComponent";
 import { CarrosselLogos } from "../../../components/CarrosselLogos";
 import CommentCarousel from "../../../components/CommentCarousel";
+import AccordionItemSM from "../../../components/AccordionItemSM";
 
 export const HomePage = () => {
   const [currentTheme, setCurrentTheme] = useState("PortalLight");
@@ -68,6 +69,8 @@ export const HomePage = () => {
   };
 
   useEffect(() => {
+    if (!activeAccordion) return;
+
     const totalIntervals = intervalTime / progressInterval;
 
     const timer = setInterval(() => {
@@ -123,7 +126,7 @@ export const HomePage = () => {
 
     if (currentVideoRef && window.innerWidth > 1000) {
       currentVideoRef.play();
-    } else {
+    } else if (currentVideoRef) {
       currentVideoRef.pause();
       currentVideoRef.currentTime = 0;
     }
@@ -158,8 +161,7 @@ export const HomePage = () => {
     };
   }, []);
 
-    const contatoRef = useRef(null);
-  
+  const contatoRef = useRef(null);
 
   return (
     <DefaultTemplate className={styles.homePage}>
@@ -171,7 +173,7 @@ export const HomePage = () => {
         >
           <div
             className={`${styles.heroText} uk-scrollspy-inview uk-animation-slide-left-medium`}
-            uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
+            uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 100;"
           >
             <Tag className="secondary" content="PORTAL RH" />
             <h1 className="title one mt-3">
@@ -182,17 +184,17 @@ export const HomePage = () => {
               Otimize processos, aumente a produtividade e transforme a sua
               gestão com tecnologia, inovação e estratégia.
             </p>
-            <ButtonPrimary
-              className="faleconosco paragraph bold responsiveContent"
-              href="https://api.whatsapp.com/send?phone=5519996844020&text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços."
-              target="_blank"
-              type="button"
-              content={buttonContent}
-            />
+              <ButtonPrimary
+                className="faleconosco paragraph bold responsiveContent text-center"
+                href="https://api.whatsapp.com/send?phone=5519996844020&text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços."
+                target="_blank"
+                type="button"
+                content={buttonContent}
+              />
           </div>
           <div
             className={`${styles.heroImage} uk-scrollspy-inview uk-animation-slide-right-medium`}
-            uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay:100;"
+            uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: false; delay:100;"
           >
             <div className={styles.iconContainer}>
               <div className={`${styles.tagsIcons}`}>
@@ -302,7 +304,7 @@ export const HomePage = () => {
               className="accordion z-3 uk-animation-slide-left-medium"
               style={{ width: "30%" }}
               id="accordionDiv"
-              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 100;"
             >
               <AccordionItem
                 data={"delay: 100;"}
@@ -398,7 +400,7 @@ export const HomePage = () => {
             </div>
             <div
               className="w-50 uk-animation-slide-right-medium"
-              uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay: 100;"
+              uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: false; delay: 100;"
             >
               {Object.keys(imageMap).map((key, index) => (
                 <div
@@ -412,7 +414,7 @@ export const HomePage = () => {
                           src={smartphone}
                           alt="Celular"
                           className="uk-animation-slide-right-medium"
-                          uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay: 200;"
+                          uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: false; delay: 200;"
                           style={{
                             position: "absolute",
                             zIndex: 3,
@@ -423,7 +425,7 @@ export const HomePage = () => {
                           imageMap={imageMap[key]}
                           ref={(el) => (videoRefs.current[index] = el)}
                           className={`${styles.demoApp} uk-animation-slide-right-medium`}
-                          uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay: 200;"
+                          uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: false; delay: 200;"
                           data-key={key}
                         />
                       </div>
@@ -431,7 +433,7 @@ export const HomePage = () => {
                         src={appWeb}
                         alt="Celular"
                         className="uk-animation-scale-up"
-                        uk-scrollspy="cls: uk-animation-scale-up; repeat: true; delay: 100;"
+                        uk-scrollspy="cls: uk-animation-scale-up; repeat: false; delay: 100;"
                         style={{
                           position: "absolute",
                           top: "-8px",
@@ -448,7 +450,7 @@ export const HomePage = () => {
                       ref={(el) => (videoRefs.current[index] = el)}
                       data-key={key}
                       className={`${styles.demo} uk-animation-slide-right-medium`}
-                      uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay: 200;"
+                      uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: false; delay: 200;"
                       muted
                       style={{ display: "block" }}
                     >
@@ -469,16 +471,8 @@ export const HomePage = () => {
           </div>
           <div className="d-flex flex-column gap-3 mt-3">
             <div className="accordion  d-flex flex-column-reverse">
-              <AccordionItem
+              <AccordionItemSM
                 className={`${styles.btnTitleAccordion} show`}
-                icon={<IconApps stroke={2} />}
-                onClick={() => {
-                  handleImageChange("app");
-                  handleAccordionClick(2);
-                }}
-                isOpen={activeAccordion === 2}
-                key={2}
-                id={"app"}
                 header={"App de Controle de Ponto"}
                 body={
                   <>
@@ -487,7 +481,6 @@ export const HomePage = () => {
                       app de ponto com localização permite que você monitore e
                       registre presenças com precisão.
                     </p>
-                    {activeAccordion === 2 && <ProgressBar />}
                   </>
                 }
               />
@@ -497,9 +490,8 @@ export const HomePage = () => {
             </div>
 
             <div className="accordion  d-flex flex-column-reverse">
-              <AccordionItem
+              <AccordionItemSM
                 className={`${styles.btnTitleAccordion} show`}
-                icon={<IconUsersPlus stroke={2} />}
                 onClick={() => {
                   handleImageChange("admissao");
                   handleAccordionClick(1);
@@ -525,9 +517,8 @@ export const HomePage = () => {
             </div>
 
             <div className="accordion  d-flex flex-column-reverse">
-              <AccordionItem
+              <AccordionItemSM
                 className={`${styles.btnTitleAccordion} show`}
-                icon={<IconPencilBolt stroke={2} />}
                 onClick={() => {
                   handleImageChange("agilidade");
                   handleAccordionClick(3);
@@ -552,9 +543,8 @@ export const HomePage = () => {
             </div>
 
             <div className="accordion  d-flex flex-column-reverse">
-              <AccordionItem
+              <AccordionItemSM
                 className={`${styles.btnTitleAccordion} show`}
-                icon={<IconBolt stroke={2} />}
                 onClick={() => {
                   handleImageChange("ged");
                   handleAccordionClick(4);
@@ -579,9 +569,8 @@ export const HomePage = () => {
             </div>
 
             <div className="accordion  d-flex flex-column-reverse">
-              <AccordionItem
+              <AccordionItemSM
                 className={`${styles.btnTitleAccordion} show`}
-                icon={<IconShieldHalf stroke={2} />}
                 onClick={() => {
                   handleImageChange("epi");
                   handleAccordionClick(5);
@@ -607,9 +596,8 @@ export const HomePage = () => {
             </div>
 
             <div className="accordion  d-flex flex-column-reverse">
-              <AccordionItem
+              <AccordionItemSM
                 className={`${styles.btnTitleAccordion} show`}
-                icon={<IconUsersPlus stroke={2} />}
                 onClick={() => {
                   handleImageChange("registro");
                   handleAccordionClick(6);
@@ -644,7 +632,7 @@ export const HomePage = () => {
         <div className="container">
           <div
             className="uk-animation-slide-right-medium"
-            uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay: 100;"
+            uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: false; delay: 100;"
           >
             <div
               className={`${styles.tag} d-flex justify-content-center text-center uk-animation-scale-up`}
@@ -679,7 +667,7 @@ export const HomePage = () => {
           <div className="d-flex flex-wrap gap-3 justify-content-center mb-5">
             <CardServices
               data={"delay: 50;"}
-              title="CONSULTORIA DE ERP"
+              title="Consultoria TOTVS RM"
               text="Excelência e proximidade"
               slogan="Tenha um sistema de gestão customizado e aderente ao seu negócio"
             >
@@ -722,12 +710,12 @@ export const HomePage = () => {
         </div>
         <div
           className={`${styles.container} container uk-animation-slide-left-medium`}
-          uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
+          uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 50;"
         >
           <div className={styles.aboutHeader}>
             <div
               className="uk-animation-slide-left-medium"
-              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 100;"
             >
               <h2 className="title one text-center">
                 Nossos <span className=" title one textLight">números</span>
@@ -735,7 +723,7 @@ export const HomePage = () => {
             </div>
             <div
               className="uk-animation-slide-left-medium"
-              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 150;"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 150;"
             >
               <p className="paragraph text-center">
                 Presente em todo o Brasil, a{" "}
@@ -782,13 +770,13 @@ export const HomePage = () => {
 
       <section
         className={`${styles.sectionArrows} uk-animation-slide-left-medium`}
-        uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
+        uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 50;"
       >
         <div className="container">
           <div className={`${styles.arrows} d-flex inverted`}>
             <svg
               className="bgArrowSecondary uk-animation-slide-left-medium"
-              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 50;"
               width="146"
               height="223"
               viewBox="0 0 146 223"
@@ -803,7 +791,7 @@ export const HomePage = () => {
             <svg
               className="uk-animation-slide-left-medium"
               width="146"
-              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 130;"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 130;"
               height="223"
               viewBox="0 0 146 223"
               fill="none"
@@ -817,7 +805,7 @@ export const HomePage = () => {
             <svg
               className="uk-animation-slide-left-medium"
               width="146"
-              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 110;"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 110;"
               height="223"
               viewBox="0 0 146 223"
               fill="none"
@@ -831,7 +819,7 @@ export const HomePage = () => {
             <svg
               className="uk-animation-slide-left-medium"
               width="146"
-              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 90;"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 90;"
               height="223"
               viewBox="0 0 146 223"
               fill="none"
@@ -845,7 +833,7 @@ export const HomePage = () => {
             <svg
               className="uk-animation-slide-left-medium"
               width="146"
-              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 70;"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 70;"
               height="223"
               viewBox="0 0 146 223"
               fill="none"
@@ -859,7 +847,7 @@ export const HomePage = () => {
             <svg
               className="uk-animation-slide-left-medium"
               width="146"
-              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
+              uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 50;"
               height="223"
               viewBox="0 0 146 223"
               fill="none"
@@ -874,7 +862,7 @@ export const HomePage = () => {
         </div>
       </section>
 
-      <section ref={contatoRef} id="contato"  className={styles.sectionForms}>
+      <section ref={contatoRef} id="contato" className={styles.sectionForms}>
         <Form />
       </section>
     </DefaultTemplate>

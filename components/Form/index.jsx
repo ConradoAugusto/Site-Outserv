@@ -17,14 +17,7 @@ export const Form = () => {
 
   const validateForm = () => {
     const formData = new FormData(form.current);
-    const requiredFields = [
-      "name",
-      "email",
-      "phone",
-      "site",
-      "solucao",
-      "tamanho_empresa",
-    ];
+    const requiredFields = ["name", "email", "phone", "solucao"];
 
     for (let field of requiredFields) {
       if (!formData.get(field)) {
@@ -62,10 +55,10 @@ export const Form = () => {
 
     emailjs
       .sendForm(
-        "default_service",
-        "templateID",
+        "service_vghcoid",
+        "template_000",
         form.current,
-        "gBB-rYOO6x8050lnB"
+        "jus4TJ_nSmrZeP4MW"
       )
       .then(
         () => {
@@ -74,7 +67,36 @@ export const Form = () => {
             title: "Mensagem enviada com sucesso!",
             showConfirmButton: false,
             timer: 1500,
+          }).then(() => {
+            Swal.fire({
+              icon: "info",
+              title: "Você será redirecionado para o WhatsApp de um consultor.",
+              text: "Aguarde...",
+              showConfirmButton: false,
+              timer: 3000,
+            }).then(() => {
+              const url =
+                "https://api.whatsapp.com/send?phone=5519971455802&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os.";
+              const newWindow = window.open(url, "_blank");
+
+              if (newWindow) {
+                newWindow.focus();
+              } else {
+                Swal.fire({
+                  title: "Pop-up bloqueado!",
+                  text: "Habilite pop-ups ou clique no botão abaixo para acessar o WhatsApp.",
+                  icon: "warning",
+                  showCancelButton: true,
+                  confirmButtonText: "Ir para WhatsApp",
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    window.location.href = url;
+                  }
+                });
+              }
+            });
           });
+
           form.current.reset();
           setMostrarTextarea(false);
           setIsButtonDisabled(true);
@@ -89,14 +111,7 @@ export const Form = () => {
 
   const checkFormCompletion = () => {
     const formData = new FormData(form.current);
-    const requiredFields = [
-      "name",
-      "email",
-      "phone",
-      "site",
-      "solucao",
-      "tamanho_empresa",
-    ];
+    const requiredFields = ["name", "email", "phone", "solucao"];
 
     for (let field of requiredFields) {
       if (!formData.get(field)) {
@@ -136,23 +151,21 @@ export const Form = () => {
         <div className={styles.containerForm}>
           <div
             className="text-center col-md-12 uk-animation-slide-left-medium"
-            data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 50;"
+            data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 50;"
           >
-            <h2 className="title two whiteColor mt-5">
-              Vamos <span>começar?</span>
+            <h2 className="title two whiteColor mt-5 mb-4">
+              Vamos <span className="textDark">começar?</span>
             </h2>
             <p className="paragraph whiteColor mb-5">
-              Procurando por uma <span> solução completa em RH e software</span>?
-              Com a Outserv, transforme desafios em oportunidades. Nossa
-              expertise em consultoria Totvs e tecnologia de ponta atende
-              clientes em todo o Brasil. Vamos conversar.
+              Insira suas informações abaixo para conversar com um consultor no
+              WhatsApp.
             </p>
           </div>
 
           <form ref={form} onSubmit={sendEmail} className={styles.formContent}>
             <div
               className="form-group col-md-12 uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 100;"
+              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 100;"
             >
               <label
                 className="whiteColor  w-100 labelText inputText"
@@ -171,7 +184,7 @@ export const Form = () => {
             </div>
             <div
               className="form-group col-md-12 uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 150;"
+              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 150;"
             >
               <label
                 className="whiteColor  w-100 labelText inputText"
@@ -185,8 +198,11 @@ export const Form = () => {
                   onChange={handleSelectChange}
                   required
                 >
-                  <option hidden defaultValue>
+                  <option hidden value="">
                     -Selecione a solução-
+                  </option>
+                  <option value="Sistema de gestão de RH">
+                    Sistema de gestão de RH
                   </option>
                   <option value="Consultoria de ERP">Consultoria de ERP</option>
                   <option value="BPO em RH">BPO em RH</option>
@@ -200,7 +216,7 @@ export const Form = () => {
             {mostrarTextarea && (
               <div
                 className="form-group col-md-12 uk-animation-slide-left-medium"
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 200;"
+                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 200;"
               >
                 <label
                   className="whiteColor  w-100 labelText inputText"
@@ -219,7 +235,7 @@ export const Form = () => {
             )}
             <div
               className="form-group col-md-12 uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 250;"
+              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 250;"
             >
               <label
                 className="whiteColor  w-100 labelText inputText"
@@ -231,14 +247,14 @@ export const Form = () => {
                   className="form-control"
                   id="email"
                   name="email"
-                  placeholder="Ex: joaodasilva@gmail.com"
+                  placeholder="seunome@suaempresa.com.br"
                   required
                 />
               </label>
             </div>
             <div
               className="form-group col-md-12 uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 300;"
+              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 300;"
             >
               <label
                 className="whiteColor  w-100 labelText inputText"
@@ -255,61 +271,10 @@ export const Form = () => {
                 />
               </label>
             </div>
-            <div
-              className="form-group col-md-12 uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 350;"
-            >
-              <label
-                className="whiteColor  w-100 labelText inputText"
-                htmlFor="site"
-              >
-                Site da empresa*
-                <input
-                  type="text"
-                  className="form-control"
-                  id="site"
-                  name="site"
-                  placeholder="Ex: www.sitedaempresa.com.br"
-                  required
-                />
-              </label>
-            </div>
-            <div
-              className="form-group col-md-12 uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 400;"
-            >
-              <label
-                className="whiteColor  w-100 labelText inputText"
-                htmlFor="tamanho_empresa"
-              >
-                Qual o tamanho da empresa?*
-                <select
-                  id="tamanho_empresa"
-                  name="tamanho_empresa"
-                  className="form-control"
-                  required
-                >
-                  <option hidden defaultValue>
-                    -Selecione o tamanho da empresa-
-                  </option>
-                  <option value="1-5">1-5</option>
-                  <option value="6-10">6-10</option>
-                  <option value="11-50">11-50</option>
-                  <option value="51-250">51-250</option>
-                  <option value="251-1K">251-1.000</option>
-                  <option value="1K-5K">1.000-5.000</option>
-                  <option value="5K-10K">5.000-10.000</option>
-                  <option value="10K-50K">10.000-50.000</option>
-                  <option value="50K-100K">50.000-100.000</option>
-                  <option value="100K+">100.000+</option>
-                  <option value="Não tenho empresa">Não tenho empresa</option>
-                </select>
-              </label>
-            </div>
 
             <p
               className="paragraph textAcordion whiteColor col-md-12 uk-animation-slide-left-medium"
-              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 450;"
+              data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 450;"
             >
               A Outserv utiliza as informações de contato que você nos fornece
               para enviar atualizações sobre nossos produtos e serviços. Você
@@ -319,7 +284,7 @@ export const Form = () => {
                 <Link
                   to={"/legal/politicas-de-privacidade"}
                   rel="noopener noreferrer"
-                  className="whiteColor bold underline"
+                  className="textDark"
                 >
                   Política de Privacidade
                 </Link>
@@ -331,7 +296,6 @@ export const Form = () => {
               type="submit"
               disabled={isButtonDisabled}
               className="btn bold faleconosco form-group col-md-12 "
-             
             >
               {isLoading ? "Enviando..." : "Enviar"}
             </button>

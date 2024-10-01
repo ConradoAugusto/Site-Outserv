@@ -1,0 +1,36 @@
+.accordion {
+  z-index: 99 !important;
+
+  h2 {
+    color: var(--gray10);
+  }
+  a {
+    font-weight: 600 !important;
+    color: var(--gray10) !important;
+    background: transparent !important;
+    border: none !important;
+  }
+
+  button::after {
+    display: none;
+  }
+}
+
+.accordionItem {
+ @media screen and (min-width: 1000px) {
+  background: var(--linearPrimary-acordeon) !important;
+  border-radius: 10px !important;
+
+  button{
+     color: var(--colorSecondary) !important;
+  }
+
+  hr {
+    display: none !important;
+  }
+
+  svg {
+    color: var(--colorTextPrimary);
+  }
+ }
+}

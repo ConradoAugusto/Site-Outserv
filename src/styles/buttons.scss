@@ -13,8 +13,6 @@
   transition: 0.5s !important;
   cursor: pointer !important;
 
- 
-
   &.light {
     border: 1px solid var(--gray4) !important;
     background: var(--btnLightLinear) !important;
@@ -47,10 +45,18 @@
     color: var(--colorPrimary) !important;
     transition: 0.3s !important;
 
+    &.hero {
+      @media (max-width: 425px) {
+        padding: 26px !important;
+        font-weight: 800 !important;
+      }
+    }
+
     &:hover {
       background: var(--colorPrimary) !important;
       transition: 0.3s !important;
       color: var(--gray1) !important;
+      font-weight: 600 !important;
     }
   }
   &.danger {
@@ -58,7 +64,6 @@
     background: transparent !important;
     color: var(--colorDanger) !important;
     transition: 0.3s !important;
-
 
     &:hover {
       transition: 0.3s !important;
@@ -88,6 +93,32 @@
     height: auto !important;
     letter-spacing: 2.16px !important;
   }
+
+  &.size {
+    transform: scale(0.8) !important;
+  }
+
+  &.delete {
+    background: transparent;
+
+    &:hover {
+      background: #c5c7cb !important;
+      font-weight: 600 !important;
+    }
+  }
+}
+
+.tagBlog {
+  display: inline-flex;
+  padding: 6px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  background: #272e48;
+  color: white;
+  font-weight: 500;
+  font-size: clamp(10px, 1.5vw, 12px);
 }
 
 .faleconosco {

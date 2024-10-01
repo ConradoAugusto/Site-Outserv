@@ -4,7 +4,6 @@ import styles from "./style.module.scss";
 import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
-import QRCODE from "../../assets/QRCODE.svg";
 
 export const ContactPage = () => {
   const [mostrarTextarea, setMostrarTextarea] = useState(false);
@@ -19,14 +18,7 @@ export const ContactPage = () => {
 
   const validateForm = () => {
     const formData = new FormData(form.current);
-    const requiredFields = [
-      "name",
-      "email",
-      "phone",
-      "site",
-      "solucao",
-      "tamanho_empresa",
-    ];
+    const requiredFields = ["name", "email", "phone", "solucao"];
 
     for (let field of requiredFields) {
       if (!formData.get(field)) {
@@ -64,10 +56,10 @@ export const ContactPage = () => {
 
     emailjs
       .sendForm(
-        "default_service",
-        "templateID",
+        "service_vghcoid",
+        "template_000",
         form.current,
-        "gBB-rYOO6x8050lnB"
+        "jus4TJ_nSmrZeP4MW"
       )
       .then(
         () => {
@@ -76,7 +68,36 @@ export const ContactPage = () => {
             title: "Mensagem enviada com sucesso!",
             showConfirmButton: false,
             timer: 1500,
+          }).then(() => {
+            Swal.fire({
+              icon: "info",
+              title: "Você será redirecionado para o WhatsApp de um consultor.",
+              text: "Aguarde...",
+              showConfirmButton: false,
+              timer: 3000,
+            }).then(() => {
+              const url =
+                "https://api.whatsapp.com/send?phone=5519971455802&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os.";
+              const newWindow = window.open(url, "_blank");
+
+              if (newWindow) {
+                newWindow.focus();
+              } else {
+                Swal.fire({
+                  title: "Pop-up bloqueado!",
+                  text: "Habilite pop-ups ou clique no botão abaixo para acessar o WhatsApp.",
+                  icon: "warning",
+                  showCancelButton: true,
+                  confirmButtonText: "Ir para WhatsApp",
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    window.location.href = url;
+                  }
+                });
+              }
+            });
           });
+
           form.current.reset();
           setMostrarTextarea(false);
           setIsButtonDisabled(true);
@@ -91,14 +112,7 @@ export const ContactPage = () => {
 
   const checkFormCompletion = () => {
     const formData = new FormData(form.current);
-    const requiredFields = [
-      "name",
-      "email",
-      "phone",
-      "site",
-      "solucao",
-      "tamanho_empresa",
-    ];
+    const requiredFields = ["name", "email", "phone", "solucao"];
 
     for (let field of requiredFields) {
       if (!formData.get(field)) {
@@ -135,45 +149,39 @@ export const ContactPage = () => {
       <div className={styles.container}>
         <div
           className={`${styles.portal} uk-scrollspy-inview uk-animation-slide-right-medium`}
-          uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: true; delay: 100;"
+          uk-scrollspy="cls: uk-animation-slide-right-medium; repeat: false; delay: 100;"
         >
           <img src={PortalLight} alt="" />
         </div>
         <div
-          className={`${styles.formContainer} d-flex flex-column align-items-center justify-content-center secondary-bg`}
+          className={`${styles.forms} d-flex flex-column align-items-center justify-content-center secondary-bg`}
         >
           <Link className={`${styles.close}`} to={"/"}>
             <strong>X</strong>
           </Link>
-          <div className={styles.form}>
+          <div className={styles.containerForm}>
             <div className="text-center">
               <h2
                 className="title two whiteColor w-100 uk-scrollspy-inview uk-animation-slide-left-medium "
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 200;"
+                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 200;"
               >
-                Vamos <span>começar?</span>
+                Vamos <span className="textDark">começar?</span>
               </h2>
               <p
                 className="paragraph whiteColor w-100 uk-scrollspy-inview uk-animation-slide-left-medium"
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 300;"
+                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 300;"
               >
-                Procurando por uma<span> solução completa em RH e software</span>? Com a Outserv,
-                transforme desafios em oportunidades. Nossa expertise em
-                consultoria Totvs e tecnologia de ponta atende clientes em todo
-                o Brasil. Vamos conversar.
+                Insira suas informações abaixo para conversar com um consultor
+                no WhatsApp.
               </p>
             </div>
-            <form
-              ref={form}
-              onSubmit={sendEmail}
-              className={styles.formContent}
-            >
+            <form ref={form} onSubmit={sendEmail}>
               <div
                 className="form-group col-md-12 uk-scrollspy-inview uk-animation-slide-left-medium"
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 400;"
+                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 400;"
               >
                 <label
-                  className="whiteColor w-100 labelText inputText"
+                  className="whiteColor d-flex flex-column gap-2 w-100 labelText inputText"
                   htmlFor="name"
                 >
                   Nome*
@@ -189,10 +197,10 @@ export const ContactPage = () => {
               </div>
               <div
                 className="form-group col-md-12 uk-scrollspy-inview uk-animation-slide-left-medium"
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 500;"
+                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 500;"
               >
                 <label
-                  className="whiteColor w-100 labelText inputText"
+                  className="whiteColor d-flex flex-column gap-2 w-100 labelText inputText"
                   htmlFor="solucao"
                 >
                   Em qual solução você tem interesse?*
@@ -203,8 +211,13 @@ export const ContactPage = () => {
                     onChange={handleSelectChange}
                     required
                   >
-                    <option hidden defaultValue>
+                    <option hidden value="">
                       -Selecione a solução-
+                    </option>
+                    <option
+                      value="Sistema de gestão de RH"
+                    >
+                      Sistema de gestão de RH
                     </option>
                     <option value="Consultoria de ERP">
                       Consultoria de ERP
@@ -220,10 +233,10 @@ export const ContactPage = () => {
               {mostrarTextarea && (
                 <div
                   className="form-group col-md-12 uk-scrollspy-inview uk-animation-slide-left-medium"
-                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 600;"
+                  data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 600;"
                 >
                   <label
-                    className="whiteColor w-100 labelText inputText"
+                    className="whiteColor d-flex flex-column gap-2 w-100 labelText inputText"
                     htmlFor="duvida"
                   >
                     Como podemos te ajudar?*
@@ -239,10 +252,10 @@ export const ContactPage = () => {
               )}
               <div
                 className="form-group col-md-12 uk-scrollspy-inview uk-animation-slide-left-medium"
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 700;"
+                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 700;"
               >
                 <label
-                  className="whiteColor w-100 labelText inputText"
+                  className="whiteColor d-flex flex-column gap-2 w-100 labelText inputText"
                   htmlFor="email"
                 >
                   Email corporativo*
@@ -251,22 +264,22 @@ export const ContactPage = () => {
                     className="form-control"
                     id="email"
                     name="email"
-                    placeholder="Ex: joaodasilva@gmail.com"
+                    placeholder="seunome@suaempresa.com.br"
                     required
                   />
                 </label>
               </div>
               <div
                 className="form-group col-md-12 uk-scrollspy-inview uk-animation-slide-left-medium"
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 800;"
+                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 800;"
               >
                 <label
-                  className="whiteColor w-100 labelText inputText"
+                  className="whiteColor d-flex flex-column gap-2 w-100 labelText inputText"
                   htmlFor="phone"
                 >
                   Telefone ou celular*
                   <input
-                    type="text"
+                    type="number"
                     className="form-control"
                     id="phone"
                     name="phone"
@@ -275,61 +288,10 @@ export const ContactPage = () => {
                   />
                 </label>
               </div>
-              <div
-                className="form-group col-md-12 uk-scrollspy-inview uk-animation-slide-left-medium"
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 1400;"
-              >
-                <label
-                  className="whiteColor w-100 labelText inputText"
-                  htmlFor="site"
-                >
-                  Site da empresa*
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="site"
-                    name="site"
-                    placeholder="Ex: www.sitedaempresa.com.br"
-                    required
-                  />
-                </label>
-              </div>
-              <div
-                className="form-group col-md-12 uk-scrollspy-inview uk-animation-slide-left-medium"
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 1500;"
-              >
-                <label
-                  className="whiteColor w-100 labelText inputText"
-                  htmlFor="tamanho_empresa"
-                >
-                  Qual o tamanho da empresa?*
-                  <select
-                    id="tamanho_empresa"
-                    name="tamanho_empresa"
-                    className="form-control"
-                    required
-                  >
-                    <option hidden defaultValue>
-                      -Selecione o tamanho da empresa-
-                    </option>
-                    <option value="1-5">1-5</option>
-                    <option value="6-10">6-10</option>
-                    <option value="11-50">11-50</option>
-                    <option value="51-250">51-250</option>
-                    <option value="251-1K">251-1.000</option>
-                    <option value="1K-5K">1.000-5.000</option>
-                    <option value="5K-10K">5.000-10.000</option>
-                    <option value="10K-50K">10.000-50.000</option>
-                    <option value="50K-100K">50.000-100.000</option>
-                    <option value="100K+">100.000+</option>
-                    <option value="Não tenho empresa">Não tenho empresa</option>
-                  </select>
-                </label>
-              </div>
 
               <p
                 className="paragraph textAcordion whiteColor w-100 uk-scrollspy-inview uk-animation-slide-left-medium"
-                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true; delay: 500;"
+                data-uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false; delay: 500;"
               >
                 A Outserv utiliza as informações de contato que você nos fornece
                 para enviar atualizações sobre nossos produtos e serviços. Você
@@ -346,27 +308,13 @@ export const ContactPage = () => {
                 </span>{" "}
                 para mais detalhes.
               </p>
-
-              <button
+              <input
                 type="submit"
                 disabled={isButtonDisabled}
+                value={isLoading ? "Enviando..." : "Enviar"}
                 className="btn bold faleconosco text-white"
-
-              >
-                {isLoading ? "Enviando..." : "Enviar"}
-              </button>
+              />
             </form>
-          </div>
-          <div className={styles.qrcode}>
-            <img src={QRCODE} alt="QR Code" />
-            <div className={styles.textQrCode}>
-              <h3 className="paragraph acordion">
-                Se preferir escaneie o QR Code
-              </h3>
-              <p className="paragraph labelText">
-                Você será redirecionado ao contato de um consultor.
-              </p>
-            </div>
           </div>
         </div>
       </div>

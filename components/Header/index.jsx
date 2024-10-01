@@ -23,10 +23,10 @@ export const Header = () => {
         setSolucaoId("solucao");
       }
     };
-  
+
     updateSolucaoId();
     window.addEventListener("resize", updateSolucaoId);
-  
+
     return () => {
       window.removeEventListener("resize", updateSolucaoId);
     };
@@ -140,6 +140,15 @@ export const Header = () => {
                   aria-label="Clientes"
                 >
                   Clientes
+                </Link>
+                <Link
+                  className={`paragraph bold linkNavbar noWrap ${
+                    styles.linkNav
+                  } ${scrolled ? styles.scrolled : styles.default}`}
+                  to="/blog"
+                  aria-label="Blog"
+                >
+                  Blog
                 </Link>
                 <Link
                   className={`paragraph bold linkNavbar noWrap ${

@@ -48,6 +48,8 @@ export const ModalCookies = ({
       <Modal.Header>
         <Modal.Title>Configurações de Cookies</Modal.Title>
         <a
+          href="#"
+          tabindex="0"
           type="button"
           className="btn-close"
           onClick={() => {
@@ -92,13 +94,28 @@ export const ModalCookies = ({
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <a className=" btn danger me-2 bold" onClick={onRejectAll}>
+        <a
+          href="#"
+          tabindex="0"
+          className=" btn danger me-2 bold"
+          onClick={onRejectAll}
+        >
           Rejeitar Todos
         </a>
-        <a className=" btn outline me-2 bold" onClick={onAcceptAll}>
+        <a
+          href="#"
+          tabindex="0"
+          className=" btn outline me-2 bold"
+          onClick={onAcceptAll}
+        >
           Aceitar Todos
         </a>
-        <a className=" btn faleconosco me-2 bold" onClick={handleSave}>
+        <a
+          href="#"
+          tabindex="0"
+          className=" btn faleconosco me-2 bold"
+          onClick={handleSave}
+        >
           Salvar Preferências
         </a>
       </Modal.Footer>

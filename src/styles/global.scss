@@ -257,7 +257,7 @@ body {
   background: var(--neon);
   margin: 0 !important;
   overflow-x: hidden !important;
-  padding-right: 0 !important;;
+  padding-right: 0 !important;
 }
 
 html.specialPage,
@@ -294,6 +294,10 @@ hr {
 
 .btn-close:focus {
   box-shadow: none !important;
+}
+
+.pointer {
+  cursor: pointer !important;
 }
 
 main {
@@ -579,8 +583,7 @@ button:focus:not(:focus-visible) {
       box-shadow: none !important;
     }
   }
-  }
-
+}
 
 .cookies {
   display: flex !important;
@@ -591,10 +594,67 @@ button:focus:not(:focus-visible) {
   left: 20px !important;
   z-index: 99999 !important;
   cursor: pointer !important;
-;
-  
-   svg {
+  svg {
     color: var(--colorPrimary);
-   }
+  }
+}
 
+.ql-toolbar {
+  flex-direction: column !important;
+  display: flex !important;
+  gap: 30px !important;
+  width: 120px !important;
+}
+
+.ql-container {
+  display: flex !important;
+  width: 100% !important;
+  color: black !important;
+  height: 100% !important;
+}
+
+.ql-editor {
+  width: 100% !important;
+
+  p {
+    font-size: 24px !important;
+    font-family: var(--fontPrimary) !important;
+  }
+}
+
+.ql-container.ql-snow {
+  border: none !important;
+}
+
+p > iframe.ql-video {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  max-width: 100%;
+  border: none;
+}
+
+p > iframe.ql-video {
+  display: block;
+}
+
+
+.mobileBreak {
+  @media (max-width: 500px) {
+    flex-direction: column-reverse !important;
+    gap: 0px !important;
+    margin-top: 20px !important;
+  }
+} 
+
+
+.card {
+  min-width: 300px !important;
+  border: none !important;
+}
+
+
+.items{
+  list-style-type: disc !important;
 }

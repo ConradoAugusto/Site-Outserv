@@ -1,8 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import ProgressBar from '../ProgressBar';
-import styles from './style.module.scss';
+import React, { useState, useEffect } from "react";
+import ProgressBar from "../ProgressBar";
+import styles from "./style.module.scss";
 
-const AccordionItem = ({ icon, id, header, body, onClick, isOpen, className, data }) => {
+const AccordionItem = ({
+  icon,
+  id,
+  header,
+  body,
+  onClick,
+  isOpen,
+  className,
+  data,
+}) => {
   const [progress, setProgress] = useState(0);
   const [isScreenSmall, setIsScreenSmall] = useState(window.innerWidth < 1000);
 
@@ -14,9 +23,9 @@ const AccordionItem = ({ icon, id, header, body, onClick, isOpen, className, dat
       setIsScreenSmall(window.innerWidth < 1000);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -28,8 +37,8 @@ const AccordionItem = ({ icon, id, header, body, onClick, isOpen, className, dat
     const totalIntervals = intervalTime / progressInterval;
 
     const timer = setInterval(() => {
-      setProgress(prev => {
-        const newProgress = prev + (100 / totalIntervals);
+      setProgress((prev) => {
+        const newProgress = prev + 100 / totalIntervals;
         if (newProgress >= 100) {
           return 0;
         }
@@ -41,8 +50,12 @@ const AccordionItem = ({ icon, id, header, body, onClick, isOpen, className, dat
   }, [intervalTime, progressInterval, id]);
 
   return (
-    <div className={`accordion-item mb-3 uk-animation-slide-left-medium p-3 ${isOpen ? styles.active  : ''}, ${isOpen ? styles.accordionItem : ''}`}
-         data-uk-scrollspy={`${data} cls: uk-animation-slide-left-medium; repeat: true;`}>
+    <div
+      className={`accordion-item mb-3 uk-animation-slide-left-medium p-3 ${
+        isOpen ? styles.active : ""
+      }, ${isOpen ? styles.accordionItem : ""}`}
+      data-uk-scrollspy={`${data} cls: uk-animation-slide-left-medium; repeat: false;`}
+    >
       <div className={`${styles.accordion} d-flex align-items-center gap-2`}>
         <span>{icon}</span>
         <h2 className="accordion-header title five" id={`heading${id}`}>
@@ -53,10 +66,12 @@ const AccordionItem = ({ icon, id, header, body, onClick, isOpen, className, dat
               onClick();
               setProgress(0);
             }}
-            {...(isScreenSmall ? {} : { 
-              'aria-expanded': isOpen,
-              'aria-controls': `collapse${id}`
-            })}
+            {...(isScreenSmall
+              ? {}
+              : {
+                  "aria-expanded": isOpen,
+                  "aria-controls": `collapse${id}`,
+                })}
           >
             {header}
           </a>
@@ -64,7 +79,9 @@ const AccordionItem = ({ icon, id, header, body, onClick, isOpen, className, dat
       </div>
       <div
         id={`collapse${id}`}
-        className={`${className} accordion-collapse collapse ${isOpen ? "show" : ""}`}
+        className={`${className} accordion-collapse collapse ${
+          isOpen ? "show" : ""
+        }`}
         aria-labelledby={`heading${id}`}
         data-bs-parent="#accordionDiv"
       >

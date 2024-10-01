@@ -7,7 +7,7 @@
     line-height: clamp(44px, 4vw, 72px) !important;
   }
   &.two {
-    font-size: clamp( 48px, 4vw, 64px) !important;
+    font-size: clamp(48px, 4vw, 64px) !important;
     line-height: clamp(50px, 4vw, 60px) !important;
   }
   &.three {
@@ -62,8 +62,6 @@
     font-weight: 600 !important;
   }
 
-
-
   &.text {
     letter-spacing: clamp(2.16px, 4vw, 1.68px) !important;
     text-transform: uppercase !important;
@@ -75,10 +73,9 @@
     font-weight: 600 !important;
   }
 
-  .linkTree {
-    font-size: clamp(10px, 4vw, 14px) !important;
+  .li {
+    font-size: clamp(10px, 4vw, 16px) !important;
   }
-  
 
   &.blue {
     color: var(--color-blue) !important;
@@ -96,7 +93,10 @@
 
 .cookies {
   font-size: clamp(10px, 4vw, 12px) !important;
-  
+}
+
+.blogData {
+  font-size: clamp(10px, 4vw, 12px) !important;
 }
 
 .labelText {
@@ -160,7 +160,6 @@
   -webkit-background-clip: text;
   color: transparent;
 }
-
 
 .numberAbout {
   width: fit-content !important;

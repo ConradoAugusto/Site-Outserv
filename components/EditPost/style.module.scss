@@ -1,0 +1,81 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--colorWhite);
+  }
+}
+.imageLabel {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  input {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+  }
+  img {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+.imagePreview {
+  width: 100%;
+  max-width: 300px;
+}
+
+.editor-container {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  background: #fff;
+  min-height: 200px;
+  font-size: 16px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.toolbar-button {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.toolbar-button:hover {
+  background: #e0e0e0;
+}
+
+.save-button {
+  margin-top: 10px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background: #0056b3;
+}
+
+.Content {
+  display: flex !important;
+  background: var(--colorWhite) !important;
+  height: 500px !important;
+  width: 100% !important;
+  border-radius: 8px !important;
+}

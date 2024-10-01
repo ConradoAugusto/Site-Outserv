@@ -1,0 +1,22 @@
+.containerForm {
+  display: flex !important;
+  margin: 29px auto -25px auto !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  transform: scale(0.8) !important;
+  @media (max-width: 768px) {
+    transform: inherit !important;
+  }
+
+  .formContent {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 886px !important;
+    flex-direction: column !important;
+    gap: 42px !important;
+    margin-bottom: 100px;
+  }
+
+ 
+}

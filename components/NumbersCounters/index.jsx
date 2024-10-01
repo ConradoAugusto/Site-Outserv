@@ -1,7 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useCountUp } from "react-countup";
 
-export const NumbersCounters = ({ text, number, delay, delayAnimation, className }) => {
+export const NumbersCounters = ({
+  text,
+  number,
+  delay,
+  delayAnimation,
+  className,
+}) => {
   const countUpRef = useRef(null);
   const observerRef = useRef(null);
   const containerRef = useRef(null);
@@ -47,7 +53,7 @@ export const NumbersCounters = ({ text, number, delay, delayAnimation, className
       className={`uk-animation-slide-left-medium m-auto align-items-center justify-content-center d-flex flex-column numbers-counters ${
         isVisible ? "animated" : ""
       }`}
-      uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: true;"
+      uk-scrollspy="cls: uk-animation-slide-left-medium; repeat: false;"
       style={{ animationDelay: `${delayAnimation}ms` }}
       ref={containerRef}
     >

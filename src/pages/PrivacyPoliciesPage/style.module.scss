@@ -40,8 +40,8 @@
   }
 
   .information {
-display: flex !important;
-justify-content: center !important;
+    display: flex !important;
+    justify-content: center !important;
 
     .content {
       max-width: 1000px !important;
@@ -53,8 +53,6 @@ justify-content: center !important;
       margin: auto !important;
       border: 2px solid var(--gray3) !important;
       margin-bottom: 100px !important;
-;
-
       @media (max-width: 600px) {
         padding: 30px !important;
       }
